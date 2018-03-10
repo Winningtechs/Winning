@@ -1881,7 +1881,7 @@ ol.list3 li:before {
 /*--------------------------------------*/
 
 #contact .title_big {
-	height:50rem;	
+	height:39rem;
 }
 
 .contact_content {
@@ -1934,7 +1934,7 @@ textarea {
     line-height: 2.25rem;
     font-weight:normal;
     margin-bottom:2rem;
-    height:10rem;
+    height:5rem;
     width:auto;
 }
 
@@ -2012,6 +2012,15 @@ input:focus, textarea:focus {outline:none;}
 	position:relative;
 	z-index:3;
 	float:right;
+}
+
+.contact_address {
+	display:table;
+	height:29.25rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-bottom: 1rem;
+	max-width:60rem;
 }
 
 
