@@ -1144,8 +1144,7 @@ ol.list3 li:before {
     float:left;
 }
 .logo img {
-    width:2.625rem;
-
+    width:10.5rem;
 }
 
 #navigation ul {
@@ -1296,7 +1295,7 @@ ol.list3 li:before {
 /*--------------------------------------*/
 
 #team {
-	padding-top: 8.125rem;	
+	padding-top: 5.125rem;
 }
 
 .intro h3 {
@@ -1600,6 +1599,12 @@ ol.list3 li:before {
 	height:29.25rem;
 	padding:5rem;
 	max-width:60rem;
+}
+title_content1 {
+	display:table;
+	height:29.25rem;
+	padding:5rem;
+	max-width:40rem;
 }
 
 .h2_element{
