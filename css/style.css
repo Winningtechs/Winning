@@ -1144,8 +1144,7 @@ ol.list3 li:before {
     float:left;
 }
 .logo img {
-    width:2.625rem;
-
+    width:10.5rem;
 }
 
 #navigation ul {
@@ -1296,7 +1295,7 @@ ol.list3 li:before {
 /*--------------------------------------*/
 
 #team {
-	padding-top: 8.125rem;	
+	padding-top: 5.125rem;
 }
 
 .intro h3 {
@@ -1575,7 +1574,7 @@ ol.list3 li:before {
 /*--------------------------------------*/
 
 .title_big_portfolio {
-	height:35.25rem;
+	height:16.25rem;
 	text-align:right;
 	padding-right:0rem;
 	display:table;
@@ -1588,7 +1587,7 @@ ol.list3 li:before {
 }
 
 .portfolio_controls {
-	display:table-cell;
+	display:list-item;
 	vertical-align: middle;
 	position:relative;
 	margin:0 auto;
@@ -1601,13 +1600,30 @@ ol.list3 li:before {
 	padding:5rem;
 	max-width:60rem;
 }
+title_content1 {
+	display:table;
+	height:29.25rem;
+	padding:5rem;
+	max-width:40rem;
+}
+
+.h2_element{
+	display: list-item;
+}
+
+@media only screen and (max-width: 501px){
+
+	.h2_element{
+		display: none ;
+	}
+}
 
 .portfolio_items {
 	padding-left:0px;
 }
 
 .owl-item {
-	height:35.25rem;
+	height:16.25rem;
 	width:auto;
 	text-align:center;
 }
@@ -1617,7 +1633,7 @@ ol.list3 li:before {
 	display: block;
 	outline: none;
 	border: none;
-	height:35.25rem;
+	height:16.25rem;
 	width:auto;
 	
 } 
@@ -1870,7 +1886,7 @@ ol.list3 li:before {
 /*--------------------------------------*/
 
 #contact .title_big {
-	height:50rem;	
+	height:39rem;
 }
 
 .contact_content {
@@ -1923,7 +1939,7 @@ textarea {
     line-height: 2.25rem;
     font-weight:normal;
     margin-bottom:2rem;
-    height:10rem;
+    height:5rem;
     width:auto;
 }
 
@@ -2001,6 +2017,15 @@ input:focus, textarea:focus {outline:none;}
 	position:relative;
 	z-index:3;
 	float:right;
+}
+
+.contact_address {
+	display:table;
+	height:29.25rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-bottom: 1rem;
+	max-width:60rem;
 }
 
 

@@ -1,12 +1,12 @@
 .demo-1 {
-	--color-text: #f4f4f4;
-	--color-bg: #fff;
-	--color-link: #f4f4f4;
+	--color-text: #fff;
+	--color-bg: #000;
+	--color-link: #fff;
 	--color-link-hover: #ac1122;
 	--color-info: #ac1122;
-	--color-title: #f4f4f4;
-	--color-subtitle: #f4f4f4;
-/*	--color-subtitle-bg: transparent;*/
+	--color-title: #fff;
+	--color-subtitle: #fff;
+	--color-subtitle-bg: #ac1122;
 }
 
 .content__title {

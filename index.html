@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Winning Technologies</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+    <title>Winning Technologies - Connect to Win</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS Files comes here -->
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">                              <!-- Bootstrap styles -->
     <link href="css/style.css" rel="stylesheet" media="screen">                                  <!-- Main CSS file -->
     <link href="css/rapid-icons.css" rel="stylesheet" media="screen">                            <!-- Custom icons CSS file -->
@@ -18,23 +20,58 @@
     <link href="css/colors/common_colors.css" rel="stylesheet" media="screen">                   <!-- Template Color Scheme -->
     <link href="css/colors/red.css" rel="stylesheet" media="screen">                             <!-- Template Colors -->
     <link href="css/responsive.css" rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
-    
-    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700|Playfair+Display" rel="stylesheet"> <!-- WegGL -->
-    <link rel="stylesheet" type="text/css" href="css/base.css" /> <!-- WegGL -->
-    <link rel="stylesheet" type="text/css" href="css/demo1.css" /> <!-- WegGL -->
-    <link rel="stylesheet" type="text/css" href="pater/pater.css" /> <!-- WegGL -->
-    
-    <!-- Modernizer and IE specyfic files -->  
+    <link rel="stylesheet" type="text/css" href="css/base.css" />                                <!-- Webgl -->
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />                               <!-- Webgl -->
+    <link rel="stylesheet" type="text/css" href="pater/pater.css" />                             <!-- Webgl -->
+    <link rel="stylesheet" type="text/css" href="css/scramble_text.css" /> 
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+    <!-- Modernizer and IE specyfic files -->
     <script src="js/modernizr.custom.js"></script>
 
-    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>   <!-- WegGL -->
-     	   
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    	<script src="js/html5shiv.js"></script>
+	  	<script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--[if IE 9]>
+    	<link href="css/ie.css" rel="stylesheet" media="screen">
+    <![endif]-->
+
+	  <!--Angel List Font-->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	  <!--For footer navigation-->
+	  <style>
+		  .flex-container {
+			  display: flex;
+			  justify-content: center;
+
+		  }
+
+		  .flex-container > div {
+			  width: 110px;
+			  margin: 10px;
+			  text-align: center;
+			  line-height: 10px;
+		  }
+	  </style>
+
+	  <!--WebGL starts-->
+
+
+
+	  <!--WebGL Ends-->
+
   </head>
-  
+
   <body>
-    
-    
-    <!-- PRELOADER -->  
+
+
+    <!-- PRELOADER -->
     <div id="preloader">
         <div id="status">
             <div class="spinner">
@@ -46,82 +83,91 @@
             </div>
         </div>
     </div>
-   
-      
-    <!-- MOBILE NAVIGATION -->      
+
+
+    <!-- MOBILE NAVIGATION -->
     <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-        <h3>MENU</h3> 
+        <h3>MENU</h3>
         <div class="mobile_nav_close_button">
         <a href="" class="button close close_v1" id="hideRight"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
         </div>
         <nav id="mobile_menu_content">
             <a href="#about_intro" >About</a>
+            <a href="#team" >Projects</a>
+            <a href="#" >Associations</a>
             <a href="#team" >Team</a>
-            <a href="#services_intro" >Services</a>
-            <a href="#portfolio_intro" >Portfolio</a>
-            <a href="#pricing" >Pricing</a>
-            <a href="#blog_intro" >Blog</a>
-            <a href="#contact" >Contact</a>
-            <a href="elements.html" >Elements</a>
+            <a href="#" >We are Hiring</a>
+            <a href="#" >Publications</a>
         </nav>
     </div>
 
- 
-    <!-- HOME -->   
+
+    <!-- HOME -->
     <section id="home">
-               <main>
-                <div class="content content--fixed">
-                </div>
-                <div class="content">
-                    <canvas class="scene scene--full" id="scene"></canvas>
-                    <script type="x-shader/x-vertex" id="wrapVertexShader">
-                        attribute float size;
-                        attribute vec3 color;
-                        varying vec3 vColor;
-                        void main() {
-                            vColor = color;
-                            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-                            gl_PointSize = size * ( 350.0 / - mvPosition.z );
-                            gl_Position = projectionMatrix * mvPosition;
-                        }
-                    </script>
-                    <script type="x-shader/x-fragment" id="wrapFragmentShader">
-                        varying vec3 vColor;
-                        uniform sampler2D texture;
-                        void main(){
-                            vec4 textureColor = texture2D( texture, gl_PointCoord );
-                            if ( textureColor.a < 0.3 ) discard;
-                            vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
-                            gl_FragColor = color;
-                        }
-                    </script>
-                    <div class="content__inner">
-                        <h2 class="content__title">Winning</h2>
-                        <h3 class="content__subtitle">Winning Technologies</h2>
+        <main>
+<!--             <div class="content content--fixed">
+                <header class="codrops-header">
+                    <img width="30%" src="img/winning-white.png">
+                </header>
+            </div> -->
+
+            <div class="content">
+
+                <canvas class="scene scene--full" id="scene"></canvas>
+                <script type="x-shader/x-vertex" id="wrapVertexShader">
+                    attribute float size;
+                    attribute vec3 color;
+                    varying vec3 vColor;
+                    void main() {
+                        vColor = color;
+                        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                        gl_PointSize = size * ( 350.0 / - mvPosition.z );
+                        gl_Position = projectionMatrix * mvPosition;
+                    }
+                </script>
+                <script type="x-shader/x-fragment" id="wrapFragmentShader">
+                    varying vec3 vColor;
+                    uniform sampler2D texture;
+                    void main(){
+                        vec4 textureColor = texture2D( texture, gl_PointCoord );
+                        if ( textureColor.a < 0.3 ) discard;
+                        vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+                        gl_FragColor = color;
+                    }
+                </script>
+                <div class="content__inner">
+                    <!--<img width="40%" src="img/winning-white.png" style="margin-right: -5%;">-->
+                    <!--<h3 class="content__subtitle">Data Science</h2>-->
+                    <div class="container" style="width: 500px;">
+                        <div class="text"></div>
                     </div>
                 </div>
-            </main>
+
+            </div>
+            <div class="logowebgl">
+                <img src="img/winning-white.png" width="10%">
+            </div>
+        </main>
+
     </section>
-    
-    
-    <!-- DESKTOP NAVIGATION -->   
+
+
+    <!-- DESKTOP NAVIGATION -->
     <section id="nav_bar">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div id="logo" class="logo"><a href="#home"><img src="images/logo.png" alt="logo"></a></div>
+                    <div id="logo" class="logo"><a href="#home"><img src="images/winning-black.png" alt="logo"></a></div>
                     <nav id="navigation">
                         <ul>
                             <li class="visible-lg visible-md active"><a href="#about_intro" id="desktop_about">About</a></li>
-                            <li class="visible-lg visible-md"><a href="#team" >Team</a></li>
-                            <li class="visible-lg visible-md"><a href="#services_intro" >Services</a></li>
-                            <li class="visible-lg visible-md"><a href="#portfolio_intro" >Portfolio</a></li>
-                            <li class="visible-lg visible-md"><a href="#pricing" >Pricing</a></li>
-                            <li class="visible-lg visible-md"><a href="#blog_intro" >Blog</a></li>
-                            <li class="visible-lg visible-md"><a href="#contact" >Contact</a></li>
-                            <li class="visible-lg visible-md"><a href="elements.html" >Elements</a></li>
+							<li class="visible-lg visible-md"><a href="#yoyo" >Projects</a></li>
+							<li class="visible-lg visible-md"><a href="#clients" >Associations</a></li>
+							<li class="visible-lg visible-md"><a href="#team" >Team</a></li>
+                            <li class="visible-lg visible-md"><a href="#yoyo" >We are Hiring!</a></li>
+							<li class="visible-lg visible-md"><a href="#yoyo" >Publications</a></li>
                         </ul>
-						
+
 						<div class="mobile_nav_open_button">
 							<a href="" class="button mobile_nav_open hidden-lg hidden-md" id="showRight"><div data-icon="&#xe2f3;" class="button_icon nav_open"></div></a>
 						</div>
@@ -132,493 +178,160 @@
     </section>
 
 
-    <!-- ABOUT - INTRO -->    
-    <section id="about_intro">
+    <!-- ABOUT - INTRO -->
+    <section id="about_intro" style="background-color: #f4f4f4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
-					<h2>About<br class="visible-lg visible-md visable-sm"> Us</h2>     
+					<h2>About<br class="visible-lg visible-md visable-sm"> Us</h2>
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
                 	<div class="content">
-	                	<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h5>
-						<p>Lorem ipsum dolor <a href="#">sit amet,</a> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>  
-					</div>    
+	                	<h5 align="center">We are a diverse collection of thinkers and doers, believing in innovation we have been continually reimagining what’s possible to help us all do what we love in new ways.</h5>
+						<p align="center">Focusing currently on IoT and Blockchain, Winning Technologies believes in the power of research and ideas, we foster innovation and build next generation products out of it. And the same passion for innovation that goes into our products also applies to our practices: strengthening our commitment to leave the world better than we found it.</p>
+					</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    <!-- ABOUT - INFO -->      
-    <section id="about_info">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
-					<div data-icon="&#xe0f3;" class="about_icon"></div>
-					<h4>Lorem ipsum</h4>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
-					<div data-icon="&#xe10c;" class="about_icon"></div>
-					<h4>Lorem ipsum</h4>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 info_box" >
-					<div data-icon="&#xe10a;" class="about_icon"></div>
-					<h4>Lorem ipsum</h4>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>     
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <!-- ABOUT - NUMBERS -->    
-    <section id="about_numbers" data-stellar-background-ratio="0.5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="&#xe03a;" class="numbers_icon"></div>
-					<span class="counter">1500</span>
-					<h6>icons included</h6>     
-                </div>
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="&#xe08e;" class="numbers_icon"></div>
-					<span class="counter">10000</span>
-					<h6>lines of code</h6>     
-                </div>
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="&#xe1ab;" class="numbers_icon"></div>
-					<span class="counter">123</span>
-					<h6>hours of work</h6>     
-                </div>
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="m" class="numbers_icon"></div>
-					<span class="counter">32</span>
-					<h6>cups of coffee</h6>     
-                </div>
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="$" class="numbers_icon"></div>
-					<span class="counter">15</span>
-					<h6>revisions made</h6>     
-                </div>
-                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 counter_box" >
-					<div data-icon="&#xe2d9;" class="numbers_icon"></div>
-					<span class="counter">13</span>
-					<h6>$ and it`s yours</h6>     
-                </div> 
-            </div>
-        </div>
-    </section>
-    
-    
-    <!-- TEAM -->     
+
+    <!-- TEAM -->
     <section id="team">
         <div class="container">
             <div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 intro" >
-					<h3>Meet our team</h3>
-					<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h5>
-                </div> 
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" >
-                	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>Duis autuis nostrud exerci tationem vel eum.</p>
-				</div>
+				<div class="intro" align="center">
+					<h3>Team</h3>
+					<h5 style="margin-top: -2.5rem;">It takes two flints to make a fire, we are many.</h5>
+                </div>
             </div>
-            
+
             <!-- MEMEBERS - GRID -->
-            <div class="row">
+            <div class="row" style="margin-top: -4.5rem;">
             	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/members/member1.jpg" alt="img01"><h6>John mc Cornick</h6><span>CEO</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src="images/members/member2.jpg" alt="img01"><h6>Jonny Biggle</h6><span>Project Manager</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-3"><img src="images/members/member3.jpg" alt="img01"><h6>Anna mc Jones</h6><span>Creative Director</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-4"><img src="images/members/member4.jpg" alt="img01"><h6>Betty Kovalsky</h6><span>Web Designer</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-5"><img src="images/members/member5.jpg" alt="img01"><h6>Matthew Novak</h6><span>Front-end developer</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-6"><img src="images/members/member6.jpg" alt="img01"><h6>Curtis Phillips</h6><span>Back-end Developer</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-7"><img src="images/members/member7.jpg" alt="img01"><h6>Joahna White</h6><span>SEO Specialist</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-8"><img src="images/members/member8.jpg" alt="img01"><h6>Kate Williams</h6><span>New Bussiness</span></a></div>
-				</div>	
-            </div>       
-        </div>    
-    </section>
-    
-           
-    <!-- SERVICES - INTRO -->     
-    <section id="services_intro" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
-					<h2>What<br class="visible-lg visible-md visable-sm"> We<br class="visible-lg visible-md visable-sm"> Do</h2>     
-                </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
-                	<div class="content">
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.<br><br>Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre.</h5>  
-					</div>    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-            
-    <!-- SERVICES - GRID -->        
-    <section id="services" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe025;" class="service_icon"></div>
-						  <h6>Web design</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe21b;" class="service_icon"></div>
-						  <h6>Print design</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh euismod.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe01f;" class="service_icon"></div>
-						  <h6>game development</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe2b5;" class="service_icon"></div>
-						  <h6>E-commerce</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh.</p>
-					  </div>   
-                </div>
-            </div>
-            <div class="row service_boxes">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe005;" class="service_icon"></div>
-						  <h6>sound & music</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe1ce;" class="service_icon"></div>
-						  <h6>photography</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh euismod.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe138;" class="service_icon"></div>
-						  <h6>support</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam.</p>
-					  </div>   
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 service_box" >
-					  <div class="service_box_content">
-						  <div data-icon="&#xe1fe;" class="service_icon"></div>
-						  <h6>marketing</h6>
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laolit, sed diam nonummy nibh.</p>
-					  </div>   
-                </div>
-            </div>
-        </div>
-    </section>
-    
-            
-    <!-- SEPARATOR - VIDEO -->        
-    <section id="video_separator">
-    <a href="#" class="md-trigger" data-modal="modal-video"></a>
-	    <div class="container-fluid ">
-	    	<div class="row">
-	    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 video_content">
-	    		<div data-icon=">" class="video_icon"></div>
-				<h3>WATCH OUR VIDEOREEL</h3>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/members/member1.jpg" alt="img01"><h6>Ambeek Kumar Khemka</h6><span>CEO</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src="images/members/member2.jpg" alt="img01"><h6>Apoorv Shankar</h6><span>CTO</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-3"><img src="images/members/member3.jpg" alt="img01"><h6>Tejinder Singh Mor</h6><span>Research Associate,FuelScale</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-4"><img src="images/members/member4.jpg" alt="img01"><h6>Samarth Singh</h6><span>Hardware Engineer</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-5"><img src="images/members/member5.jpg" alt="img01"><h6>Diksha Singh</h6><span>Product Analyst, Interim HR</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-6"><img src="images/members/member6.jpg" alt="img01"><h6>Shristi Rai</h6><span>Graphic Designer</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-7"><img src="images/members/member7.jpg" alt="img01"><h6>Dikshant Singh</h6><span>Investment Analyst Intern</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-8"><img src="images/members/member8.jpg" alt="img01"><h6>Gagan Kotiya</h6><span>Investment Analyst Intern</span></a></div>
+				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-9"><img src="images/members/member8.jpg" alt="img01"><h6>Shrey Sharma</h6><span>Web Developer Intern</span></a></div>
+				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-10"><img src="images/members/member8.jpg" alt="img01"><h6>Abhijeet Kumar</h6><span>Web Developer</span></a></div>
+				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-11"><img src="images/members/member8.jpg" alt="img01"><h6>Nikhil K Mishra</h6><span>Backend Developer</span></a></div>
+				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-12"><img src="images/members/member8.jpg" alt="img01"><h6>This can be you !</h6></a></div>
 				</div>
-	    	</div>
-	    </div> 
-	    <div class="video_hover_solid"></div>
-	    <div class="video_pattern"></div>
-	    <div class="video-fallback"></div>
-	    <div class="hidden-xs video-container">
-		    <video autoplay loop class="fillWidth" width="896" height="504">
-		        <source src="video/video.mp4" type="video/mp4"/>
-		        <source src="video/video.ogg" type="video/ogg"/>
-		        <source src="video/video.webm" type="video/webm"/>
-		        Your browser does not support the video tag. I suggest you upgrade your browser.
-		    </video>
-	    </div>
+            </div>
+        </div>
     </section>
-    
-         
-    <!-- PORTFOLIO - INTRO -->        
+
+
+    <!-- Advisors -->
     <section id="portfolio_intro" >
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
-					<h2>Our<br class="visible-lg visible-md visable-sm"> Work</h2>     
+					<h2><br class="visible-lg visible-md visable-sm"> ADVISORS</h2>
                 </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
-                	<div class="content">
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
-					</div>    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-       
-    <!-- PORTFOLIO - CAROUSEL -->        
-    <section id="portfolio" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio" >
-	                <div class="portfolio_controls">
-						<div class="customNavigation">
-						<a href="#" class="button arrow_right arrow_right_v1 btn next"><div data-icon="&#xe105;" class="button_icon arrow_right_icon"></div></a>
-						<a href="#" class="button arrow_left arrow_left_v1 btn prev"><div data-icon="&#xe107;" class="button_icon arrow_left_icon"></div></a>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content1" style="max-width: 60vw" >
+					<div class="container-fluid" >
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio h2_element"  >
+								<div class="portfolio_controls">
+									<div class="customNavigation">
+										<a href="#" class="button arrow_right arrow_right_v1 btn next"><div data-icon="&#xe105;" class="button_icon arrow_right_icon"></div></a>
+										<a href="#" class="button arrow_left arrow_left_v1 btn prev"><div data-icon="&#xe107;" class="button_icon arrow_left_icon"></div></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 portfolio_items" >
+								<div id="owl-gallery" class="owl-carousel owl-theme">
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/grass.jpg" alt="img01"><h6>Venugopal Konchada</h6><span>CEO, Vmart</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work2.jpg" alt="img01"><h6>Siddharth Tripathy</h6><span>Director, Healthify.me</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work3.jpg" alt="img01"><h6>Rajeev Mangla</h6><span>Ex-CTO, Snapdeal</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work4.jpg" alt="img01"><h6>Dr. Deepak Pandit</h6><span>Co-founder, iSEED</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work5.jpg" alt="img01"><h6>Subhashis Nath</h6><span>Executive Director, Axis Risk Consulting</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work6.jpg" alt="img01"><h6>Col.Inderjit Singh Barara</h6><span>CSI</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work7.jpg" alt="img01"><h6>Pavan Duggal</h6><span>Cyberlaws.Net</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Rakesh Kapoor</h6><span>CEO, NHHFDL</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Harish Saraf</h6><span>Director, Nippon Data</span></a></div>
+								</div>
+							</div>
 						</div>
-					</div>	    
-                </div>
-                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 portfolio_items" >
-	                <div id="owl-gallery" class="owl-carousel owl-theme">
-						<div class="owl-item effect"><a href="portfolio_image.html"><img src="images/portfolio/work1.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_slider.html"><img src="images/portfolio/work2.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_vimeo.html"><img src="images/portfolio/work3.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_youtube.html"><img src="images/portfolio/work4.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_fullwidth_v1.html"><img src="images/portfolio/work5.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_fullwidth_v2.html"><img src="images/portfolio/work6.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_image.html"><img src="images/portfolio/work7.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-						<div class="owl-item effect"><a href="portfolio_slider.html"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Work Title</h6><span>Print Design</span></a></div>
-					</div>	
+					</div>
+
+
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    <!-- CLIENTS -->       
+
+
+    <!-- PORTFOLIO - CAROUSEL -->
+    <section id="portfolio" >
+        <!--<div class="container-fluid" style="max-width: 50vw">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio h2_element"  >-->
+	                <!--<div class="portfolio_controls">-->
+						<!--<div class="customNavigation">-->
+						<!--<a href="#" class="button arrow_right arrow_right_v1 btn next"><div data-icon="&#xe105;" class="button_icon arrow_right_icon"></div></a>-->
+						<!--<a href="#" class="button arrow_left arrow_left_v1 btn prev"><div data-icon="&#xe107;" class="button_icon arrow_left_icon"></div></a>-->
+						<!--</div>-->
+					<!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 portfolio_items" >-->
+	                <!--<div id="owl-gallery" class="owl-carousel owl-theme">-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/grass.jpg" alt="img01"><h6>Venugopal Konchada</h6><span>CEO, Vmart</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work2.jpg" alt="img01"><h6>Siddharth Tripathy</h6><span>Director, Healthify.me</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work3.jpg" alt="img01"><h6>Rajeev Mangla</h6><span>Ex-CTO, Snapdeal</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work4.jpg" alt="img01"><h6>Dr. Deepak Pandit</h6><span>Co-founder, iSEED</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work5.jpg" alt="img01"><h6>Subhashis Nath</h6><span>Executive Director, Axis Risk Consulting</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work6.jpg" alt="img01"><h6>Col.Inderjit Singh Barara</h6><span>CSI</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work7.jpg" alt="img01"><h6>Pavan Duggal</h6><span>Cyberlaws.Net</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Rakesh Kapoor</h6><span>CEO, NHHFDL</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Harish Saraf</h6><span>Director, Nippon Data</span></a></div>-->
+					<!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+
+
+    <!-- CLIENTS -->
     <section id="clients">
         <div class="container">
             <div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 intro" >
-				<h3>Our Clients</h3> 
+				<h3>Associations</h3>
 				</div>
 			</div>
-			<div class="row">	               
+			<div class="row">
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_1.png" alt="img01" class="img-responsive"></div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_2.png" alt="img01" class="img-responsive"></div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_3.png" alt="img01" class="img-responsive"></div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_4.png" alt="img01" class="img-responsive"></div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_5.png" alt="img01" class="img-responsive"></div>
                 <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2" ><img src="images/client_logo_6.png" alt="img01" class="img-responsive"></div>
-            </div>    
-        </div>    
+            </div>
+        </div>
     </section>
-    
-           
-    <!-- PRICING -->       
-    <section id="pricing">
-        <div class="container">
-            <div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 intro" >
-				<h3>Pricing</h3> 
-				<h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</h5>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pricing_table_container">
-					<!-- PRICING TABLE 1 -->
-					<div class="pricing_table">
-						<div class="pricing_table_header">
-						<h6>Basic</h6>
-						<span>$1200</span>
-						<p>Single payment or 3 rates.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Design + HTML5 Conversion</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>One Page Scroll-down Layout</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Css3 & jQuery Powered</p>
-						</div>
-						
-						<div class="pricing_table_footer">
-						<a href="#" class="cta_dark">Choose this plan</a>
-						</div>
-						
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pricing_table_container">	
-					<!-- PRICING TABLE 2 -->
-					<div class="pricing_table">
-						<div class="pricing_table_header">
-						<h6>Premium</h6>
-						<span>$2000</span>
-						<p>Single payment or 3 rates.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Design + HTML5 Conversion</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>One Page Scroll-down Layout</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Css3 & jQuery Powered</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>24/7 Customer Support</p>
-						</div>
-						
-						<div class="pricing_table_footer">
-						<a href="#" class="cta_dark">Choose this plan</a>
-						</div>
-						
-					</div>
-				</div>	
-				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pricing_table_container">	
-					<!-- PRICING TABLE 3 -->
-					<div class="pricing_table">
-						<div class="pricing_table_header">
-						<h6>Enterprise</h6>
-						<span>$3000</span>
-						<p>Single payment or 3 rates.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Design + HTML5 Conversion</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>One Page Scroll-down Layout</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Css3 & jQuery Powered</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>24/7 Customer Support</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Integrated Accounting</p>
-						</div>
-						
-						<div class="pricing_table_item">
-						<p>Custom Domain</p>
-						</div>
-						
-						<div class="pricing_table_footer">
-						<a href="#" class="cta_dark">Choose this plan</a>
-						</div>	
-					</div>
-				</div>
-			</div>
-        </div>    
-    </section>
-    
-        
-    <!-- SEPARATOR - PARALLAX -->      
+
+
+
+
+    <!-- SEPARATOR - PARALLAX -->
     <section id="parallax_separator" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-					<h4>ALEXA is a Premium HTML/CSS TEMPLATE focused on<br>multidisciplinary creative fields </h4>     
+					<h4>Everything is shits and giggles until someone giggles and shits.</h4>
                 </div>
             </div>
         </div>
     </section>
 
-          
-    <!-- BLOG - INTRO -->      
-    <section id="blog_intro" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
-					<h2>From<br class="visible-lg visible-md visable-sm"> The<br class="visible-lg visible-md visable-sm"> Blog</h2>     
-                </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
-                	<div class="content">
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol. Souvlaki ignitus carborundum e pluribus unum.</h5>  
-					</div>    
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        
-    <!-- BLOG - POSTS -->        
-    <section id="blog_posts" >
-    	<!-- BLOG - POST 1 -->
-	    <div class="post_excerpt"><a href="single_post.html" class="post_link">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
-						<h3>Fluid teams: the way you'll work for the rest of your career</h3>   
-						<p>Dylan Feltus&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;January 30, 2014</p>  
-	                </div>
-	            </div>
-	        </div></a>
-        </div>
-        <!-- BLOG - POST 2 -->
-        <div class="post_excerpt"><a href="single_post.html" class="post_link">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
-						<h3>Preparing Your Conference Website</h3>    
-						<p>Dylan Feltus&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;January 30, 2014</p> 
-	                </div>
-	            </div>
-	        </div></a>
-        </div>
-        <!-- BLOG - POST 3 -->
-        <div class="post_excerpt"><a href="single_post.html" class="post_link">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
-						<h3>How To Build a Social Media Profile Widget in WordPress</h3>  
-						<p>Dylan Feltus&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;January 30, 2014</p>   
-	                </div>
-	            </div>
-	        </div></a>
-        </div>
-        <!-- BLOG - LOAD MORE POSTS -->
-		<div class="more_posts">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-						<a href="blog.html" class="cta_dark">Load more posts</a>   
-	                </div>
-	            </div>
-	        </div>
-        </div>  
-    </section>
-    
-            
-    <!-- CONTACT -->       
+
+    <!-- CONTACT -->
     <section id="contact">
         <div class="container-fluid">
             <div class="row">
@@ -632,73 +345,83 @@
 		                        <h5>Your Name:</h5>
 		                        <input type="text" name="contact-name">
 		                        </div>
-		                        
+
 		                        <div class="input">
 		                        <h5>Your E-mail:</h5>
 		                        <input type="email" name="contact-email">
 		                        </div>
-		                        
+
 		                        <div class="input">
 		                        <h5>Message:</h5>
 		                        <textarea name="contact-message"></textarea>
 		                        </div>
-		                        
+
 		                        <button id="btn-send" class="cta_light" type="submit">Submit</button>
 		                    </form>
-		                    <div id="message"><div id="alert"></div></div> 
-	                    </div>    
+		                    <div id="message"><div id="alert"></div></div>
+	                    </div>
 	                </div>
                 </div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_content" >
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 contact_address" style="padding-top: -10rem;">
                 	<div class="content">
                 		<!-- CONTACT INFO -->
-	                	<h5>Epsum factorial non deposit quid pro quo hic escorol.</h5>
 	                	<div data-icon="&#xe1b4;" class="contact_icon"></div>
-	                	<h5>Alexa Creative Agency</h5>
-	                	<p>121 King Street, Melbourne <br class="hidden-xs">Victoria 3000 Australia</p>
-	                	
+	                	<h5>Winning Technologies Private Limited</h5>
+	                	<p>M-47, 1st Floor, Panther Lane,<br class="hidden-xs">Greater Kailash-1, New Delhi, Delhi 110048</p>
+
 	                	<div data-icon="&#xe23a;" class="contact_icon"></div>
-	                	<h5>0012 123 456 789</h5>
-	                	
+	                	<h5>011 2923 3328</h5>
+
 	                	<div data-icon="&#xe242;" class="contact_icon"></div>
-	                	<h5><a href="mailto:contact@alexa.com">contact@alexa.com</a></h5>  
-					</div>    
+	                	<h5><a href="mailto:contact@alexa.com">contact@winningtechs.com</a></h5>
+					</div>
                 </div>
             </div>
         </div>
     </section>
-    
-        
-    <!-- FOOTER -->        
+
+
+    <!-- FOOTER -->
     <section id="footer" data-stellar-background-ratio="0.5">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 footer_content" >
-					<h4>Copyright © 2014 Alexa Creative Agency</h4>   
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 footer_content" >
+					<h4>Copyright © 2018 Winning Technologies Private Limited</h4>
 					<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="window.open('mailto:connect@winningtechs.com','_blank')"></div></li>
+	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="window.open('https://www.facebook.com/Winningtechs/','_blank')"></div></li>
+	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/company/13631994/','_blank')"></div></li>
+						<li><div class="social_icon fa fa-angellist" style="font-size: 20px" onclick="window.open('https://angel.co/winning-technologies-private','_blank')"></div></li>
 	                </ul>
-					</div>  
-					
-                </div>	
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 footer_arrow_container" >
+					</div>
+
+                </div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer_arrow_container" >
 					<a href="#home" class="button arrow_up arrow_up_v1"><div data-icon="&#xe106;" class="button_icon arrow_up_icon"></div></a>
                 </div>
             </div>
-        </div>
+			<hr style="margin-top: 1rem; padding-bottom: 0;">
+			<div class="flex-container" style="margin-top: -4rem;">
+
+				<div><a style="color: white; text-decoration: none" href="#portfolio_intro">Advisors</a></div>
+				<div><a style="color: white; text-decoration: none" href="#">Press</a></div>
+				<div><a style="color: white; text-decoration: none" href="#">Blog</a></div>
+				<div><a style="color: white; text-decoration: none" href="#">Case Studies</a></div>
+				<div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Policies</a></div>
+				<div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Research Papers</a></div>
+				<div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Whitepapers</a></div>
+
+			</div>
+		</div>
     </section>
-    
-       
-    <!-- MODAL BOX - VIDEO -->    
+
+
+    <!-- MODAL BOX - VIDEO -->
 	<div class="md-modal md-effect-1" id="modal-video">
 		<div class="md-content ">
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
 			</div>
 			<div class="video md-video-content">
 			<iframe src="//player.vimeo.com/video/97971369?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" allowfullscreen>
@@ -706,218 +429,281 @@
 			</div>
 		</div>
 	</div>
-	
-        
-    <!-- MODAL BOX - MEMBER 1 -->    
+
+
+    <!-- MODAL BOX - MEMBER 1 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-1">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member1@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
 			</div>
 			<div class="modal_text">
 			<div class="centered_text">
 				<h6>CEO</h6>
-				<h3>John mc Cornick</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+				<h3>Ambeek Kumar Khemka</h3>
+				<p>Serial Entrepreneur and have gained rich and enviable experiences in various sectors and Industries.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:someone@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/ambeek', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 2 -->    
+
+
+    <!-- MODAL BOX - MEMBER 2 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-2">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member2@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>Project Manager</h6>
-				<h3>Jonny Biggle</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+				<h6>CTO</h6>
+				<h3>Apoorv Shankar</h3>
+				<p>Drinking cups of technology since 1994.<br>I believe in building. Be it a technology,<br>a company, relations or the world.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:apoorv@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/apoorv-shankar-4137358a', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 3 -->    
+
+
+    <!-- MODAL BOX - MEMBER 3 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-3">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member3@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>Creative Director</h6>
-				<h3>Anna mc Jones</h3>
+				<h6>Research Associate, FuelScale</h6>
+				<h3>Tejinder Singh Mor</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:tejinder@fuelscale.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('your_html', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 4 -->    
+
+
+    <!-- MODAL BOX - MEMBER 4 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-4">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member4@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>Web Designer</h6>
-				<h3>Betty Kovalsky</h3>
+				<h6>Hardware Engineer</h6>
+				<h3>Samarth Singh</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:samarth@fuelscale.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('your_html', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 5 -->    
+
+
+    <!-- MODAL BOX - MEMBER 5 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-5">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member5@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>Front-end developer</h6>
-				<h3>Matthew Novak</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
+				<h6>Diksha Singh</h6>
+				<h3>Product Analyst, Interim HR</h3>
+				<p>I love turning coffee into code. I have a product that can help you brew your business into a huge success. Join us for a cup of coffee and I can tell you all about it.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:diksha@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('www.linkedin.com/in/diksha1208', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 6 -->    
+
+
+    <!-- MODAL BOX - MEMBER 6 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-6">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member6@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>Back-end Developer</h6>
-				<h3>Curtis Phillips</h3>
+				<h6>Graphic Designer</h6>
+				<h3>Shristi Rai</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:shristi@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/shristi-rai-25a910157', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 7 -->    
+
+
+    <!-- MODAL BOX - MEMBER 7 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-7">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member7@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>SEO Specialist</h6>
-				<h3>Joahna White</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
+				<h6>Investment Analyst Intern</h6>
+				<h3>Dikshant Singh</h3>
+				<p>Working with the Cryptocurrency Market to grow the Investment fund in every possible way.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:ds@nikoin.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/dikshant-singh-b894a3156', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-    <!-- MODAL BOX - MEMBER 8 -->    
+
+
+    <!-- MODAL BOX - MEMBER 8 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-8">
 		<div class="md-content">
 			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
-			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a> 
-			</div> 
+			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
 			<div class="modal_text">
-				<h6>New bussiness</h6>
-				<h3>Kate Williams</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
+				<h6>Investment Analyst Intern</h6>
+				<h3>Gagan Kotiya</h3>
+				<p>Working with the Cryptocurrency Market to grow the Investment fund.</p>
 				<div class="social_icons">
 	                <ul>
-	                	<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
-	                    <li><div data-icon="&#xe27f;" class="social_icon dribbble_icon" onclick="location.href='#'"></div></li>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:gk@nikoin.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/gagan-kotiya-9862b815b', '_blank')"></div></li>
 	                </ul>
 		        </div>
 			</div>
 		</div>
 	</div>
-	
-		
-	<!-- MODAL BOX - OVERLAY LAYER -->	
+
+
+	<!-- MODAL BOX - MEMBER 9 -->
+	<div class="md-modal md-effect-1 modal-member" id="modal-9">
+		<div class="md-content">
+			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
+			<div class="modal_close_button">
+				<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
+			<div class="modal_text">
+				<h6>Web Developer Intern</h6>
+				<h3>Shrey Sharma</h3>
+				<p>Front and Back are the two ends I make try to meet.</p>
+				<div class="social_icons">
+					<ul>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:shrey.sharma@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/techieshrey', '_blank')"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- MODAL BOX - MEMBER 10 -->
+	<div class="md-modal md-effect-1 modal-member" id="modal-10">
+		<div class="md-content">
+			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
+			<div class="modal_close_button">
+				<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
+			<div class="modal_text">
+				<h6>Web Developer</h6>
+				<h3>Abhijeet Kumar</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
+				<div class="social_icons">
+					<ul>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:abhijeet@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/abhikumar706', '_blank')"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- MODAL BOX - MEMBER 11 -->
+	<div class="md-modal md-effect-1 modal-member" id="modal-11">
+		<div class="md-content">
+			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
+			<div class="modal_close_button">
+				<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
+			<div class="modal_text">
+				<h6>New bussiness</h6>
+				<h3>Nikhil K Mishra</h3>
+				<p>Working behind the scenes.</p>
+				<div class="social_icons">
+					<ul>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:nikhil@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/in/nikhil-k-mishra', '_blank')"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MODAL BOX - MEMBER 12 -->
+	<div class="md-modal md-effect-1 modal-member" id="modal-12">
+		<div class="md-content">
+			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
+			<div class="modal_close_button">
+				<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
+			</div>
+			<div class="modal_text">
+				<h6>Hey Curious fellow</h6>
+				<h3>This can be you !</h3>
+				<p>Come join the Winning family.</p>
+				<div class="social_icons">
+					<ul>
+						<li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="location.href='mailto:connect@winningtechs.com?Subject=Curious%20fellow'"></div></li>
+						<li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/company/13631994/', '_blank')"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- MODAL BOX - OVERLAY LAYER -->
     <div class="md-overlay"></div>
-   
-   
-   
-	<!-- JavaScript plugins comes here -->	
+
+
+
+	<!-- JavaScript plugins comes here -->
     <script src="js/jquery-2.0.3.min.js"></script>        <!-- jQuery -->
-    <script src="js/jquery.easing.min.js"></script>       <!-- jQuery easing-->    
+    <script src="js/jquery.easing.min.js"></script>       <!-- jQuery easing-->
     <script src="js/jquery.scrollTo.js"></script>         <!-- scroll to-->
     <script src="js/jquery.form.js"></script>             <!-- form -->
     <script src="js/main.js"></script>                    <!-- main js file -->
@@ -935,12 +721,16 @@
 	<script src="js/cbpFWTabs.js"></script>               <!-- tabs -->
 	<script src="js/vallenato.js"></script>               <!-- accordion -->
 	<script src="js/dots.js"></script>                    <!-- dots - pagination -->
-    <script src="js/demo.js"></script>                    <!-- WebGl -->
-    <script src="js/three.min.js"></script>               <!-- WebGl -->
-    <script src="js/TweenMax.min.js"></script>            <!-- WebGl -->
-    <script src="js/demo1.js"></script>                   <!-- WebGl -->
+            <!--Scramble Text-->
+    <script  src="js/scramble_text.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-	<!-- OWL CAROUSEL - PORTFOLIO -->	
+
+	<!-- OWL CAROUSEL - PORTFOLIO -->
     <script>
 		$( document ).ready(function()  {
 			var owl = $('#owl-gallery');
@@ -957,15 +747,15 @@
 			$('.prev').click(function(){owl.trigger('owl.prev');return false; })
         });
     </script>
-    
-    
+
+
     <!-- MOBILE NAVIGATION -->
     <script>
         var showRight = document.getElementById( 'showRight' ),
         hideRight = document.getElementById( 'hideRight' ),
         menuRight = document.getElementById( 'cbp-spmenu-s2' ),
         body = document.body;
-        
+
         showRight.onclick = function(event) {
        		"use strict";
        		event.preventDefault();
@@ -974,7 +764,7 @@
             disableOther( 'showRight' );
             return false;
         };
-    
+
         hideRight.onclick = function(event) {
         	"use strict";
         	event.preventDefault();
@@ -984,10 +774,10 @@
             return false;
         };
     </script>
-    
 
-    
 
-    
+
+
+
   </body>
 </html>

@@ -104,6 +104,9 @@ main {
 	pointer-events: none;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: auto auto 4em;
+	grid-template-areas: 'header ...'
+	'... ...'
+	'github demos';
 }
 
 .content--fixed a {
@@ -150,26 +153,26 @@ main {
 	grid-area: demos;
 }
 
-.body {
+.demo {
 	margin: 0 0.15em;
 }
 
-.body:hover,
-.body:focus {
+.demo:hover,
+.demo:focus {
 	opacity: 0.5;
 }
 
-.body span {
+.demo span {
 	white-space: nowrap;
 	text-transform: lowercase;
 	pointer-events: none;
 }
 
-.body span::before {
+.demo span::before {
 	content: '#';
 }
 
-a.body--current {
+a.demo--current {
 	pointer-events: none;
 	color: var(--color-link-hover);
 }
@@ -239,7 +242,7 @@ a.body--current {
 		padding-right: 80px;
 		justify-self: end;
 	}
-	.body {
+	.demo {
 		display: block;
 		width: 17px;
 		height: 17px;
@@ -247,17 +250,17 @@ a.body--current {
 		border-radius: 50%;
 		background: var(--color-link);
 	}
-	a.body--current {
+	a.demo--current {
 		background: var(--color-link-hover);
 	}
-	.body span {
+	.demo span {
 		line-height: 1;
 		position: absolute;
 		right: 100%;
 		display: none;
 		margin: 0 1em 0 0;
 	}
-	.body--current span {
+	.demo--current span {
 		display: block;
 	}
 }
