@@ -20,13 +20,12 @@
     <link href="css/colors/common_colors.css" rel="stylesheet" media="screen">                   <!-- Template Color Scheme -->
     <link href="css/colors/red.css" rel="stylesheet" media="screen">                             <!-- Template Colors -->
     <link href="css/responsive.css" rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
-
     <link rel="stylesheet" type="text/css" href="css/base.css" />                                <!-- Webgl -->
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />                               <!-- Webgl -->
-    <link rel="stylesheet" type="text/css" href="pater/pater.css" />                             <!-- Webgl -->
-    <link rel="stylesheet" type="text/css" href="css/scramble_text.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />                             <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/scramble_text.css" />                       <!-- scramble text -->
     <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-
+    <script type='text/javascript' src="js/jquery-1.10.2.min.js"></script>
 
     <!-- Modernizer and IE specyfic files -->
     <script src="js/modernizr.custom.js"></script>
@@ -143,7 +142,6 @@
                     <div class="container" style="width: 500px;">
                         <div class="text"></div>
                     </div>
-
                 </div>
 
             </div>
@@ -151,7 +149,6 @@
                 <img src="img/winning-white.png" width="10%">
             </div>
         </main>
-
 
     </section>
 
@@ -165,7 +162,7 @@
                     <nav id="navigation">
                         <ul>
                             <li class="visible-lg visible-md active"><a href="#about_intro" id="desktop_about">About</a></li>
-							<li class="visible-lg visible-md"><a href="#yoyo" >Projects</a></li>
+							<li class="visible-lg visible-md"><a href="#project" >Projects</a></li>
 							<li class="visible-lg visible-md"><a href="#clients" >Associations</a></li>
 							<li class="visible-lg visible-md"><a href="#team" >Team</a></li>
                             <li class="visible-lg visible-md"><a href="#yoyo" >We are Hiring!</a></li>
@@ -182,9 +179,8 @@
     </section>
 
 
-
+    <!-- ABOUT - INTRO -->
     <section id="about_intro" style="background-color: #f4f4f4">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
@@ -200,16 +196,88 @@
         </div>
     </section>
 
+    <section id="project" style="background-color: #fff">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 Project_content" style="padding: 0px;" >
+                    <div class="project_item1 col-sm-5 col-lg-5 col-md-5" id="adda_title">
+                        <img src="img/fuelscale.png" alt="img01" width="66%" height="80%" style="margin-left: 5%;">
+                        <span id="adda_title" class="projects_title"><h5>1adda</h5></span>
+                    </div>
+                    <div class="project_item2 col-sm-5 col-lg-5 col-md-5" id="shoped_title">
+                        <img src="img/fuelscale.png" alt="img01" width="66%" height="80%" style="margin-left: 5%;">
+                        <span id="shoped_title" class="projects_title"><h5>Shoped</h5></span>
+                        
+                    </div>
+                    <div class="project_item3 col-sm-5 col-lg-5 col-md-5" id="fuelscale_title">
+                        <img src="img/fuelscale.png" alt="img01" width="66%" height="80%" style="margin-left: 5%;">
+                        <span id="shoped_title" class="projects_title"><h5>FuelScale</h5></span>
+                    </div>
+                    <div class="project_item4 col-sm-5 col-lg-5 col-md-5" id="baas_title">
+                        <img src="img/fuelscale.png" alt="img01" width="66%" height="80%" style="margin-left: 5%;">
+                        <span id="shoped_title" class="projects_title"><h5>Baas</h5></span>
+                    </div>
+                
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 Project_title" >
+                <h2 class="project_head" id="project_head">Project</h2>
+                <div id="adda">
+                    <h3>1adda</h3>
+                    <p style="margin-top: 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button href="facebook.com" class="knowmore" >Know More</button>
+                </div>
+                <div id="shoped">
+                    <h3>shoped</h3>
+                    <p style="margin-top: 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button href="facebook.com" class="knowmore" >Know More</button>
+                </div>
+                <div id="fuelscale">
+                    <h3>Fuelscale</h3>
+                    <p style="margin-top: 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button href="facebook.com" class="knowmore" >Know More</button>
+                </div>
+                <div id="baas">
+                    <h3>BaaS</h3>
+                    <p style="margin-top: 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button href="facebook.com" class="knowmore" >Know More</button>
+                </div>
+           </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $('#adda_title').click(function() {
+          $('#adda').css("display","block");
+          $('#project_head').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","none");
+        });
+        $('#shoped_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","block");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","none");
+        });
+        $('#fuelscale_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","block");
+          $('#baas').css("display","none");
+        });
+        $('#baas_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","block");
+        });
+    </script>
+
     <!-- TEAM -->
     <section id="team" style="background-color: #f4f4f4">
-<!--         <div class="container" style="display: inline-block;">
-           <div class="row">
-				<div class="intro" align="center">
-					<h3>Team</h3>
-					<h5 style="margin-top: -2.5rem;">It takes two flints to make a fire, we are many.</h5>
-                </div>
-            </div>
-        </div> -->
 
             <div class="intro" align="center">
                 <h3>Team</h3>
@@ -217,11 +285,10 @@
             </div>
             <!-- MEMEBERS - GRID -->
             <div style="padding-left: 5%;padding-right: 5%;">
-
             <div class="row" style="margin-top: -4.5rem;">
             	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/members/member1.jpg" alt="img01"><h6>Ambeek Kumar Khemka</h6><span>CEO</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src="images/members/member2.jpg" alt="img01"><h6>Apoorv Shankar</h6><span>CTO</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/members/member1.jpg" alt="img01"><h6>Ambeek Kumar Khemka</h6><span>Founder</span></a></div>
+            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src="images/members/member2.jpg" alt="img01"><h6>Apoorv Shankar</h6><span>Co-Founde</span></a></div>
             	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-3"><img src="images/members/member3.jpg" alt="img01"><h6>Tejinder Singh Mor</h6><span>Research Associate,FuelScale</span></a></div>
             	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-4"><img src="images/members/member4.jpg" alt="img01"><h6>Samarth Singh</h6><span>Hardware Engineer</span></a></div>
             	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-5"><img src="images/members/member5.jpg" alt="img01"><h6>Diksha Singh</h6><span>Product Analyst, Interim HR</span></a></div>
@@ -241,9 +308,7 @@
 
 
     <!-- Advisors -->
-
     <section id="portfolio_intro" style="background-color: #f4f4f4" >
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
@@ -314,7 +379,6 @@
 
 
     <!-- CLIENTS -->
-
     <section id="clients" style="background-color: #f4f4f4">
         <div class="container">
             <div class="row">
@@ -332,6 +396,8 @@
             </div>
         </div>
     </section>
+
+
 
 
     <!-- SEPARATOR - PARALLAX -->
