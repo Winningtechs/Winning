@@ -199,11 +199,11 @@
 	background-color: #fff; 
 	position: relative;
 	display: inline-block;
-	border: 10px solid #f4f4f4;
+	border: 15px solid #f4f4f4;
 }
 .projectcard:hover
 {
-	transform: scale(1.15);
+	transform: scale(0.8);
 	transition: all 0.35s ease-in-out;
 }
 .texmcaption
@@ -216,6 +216,7 @@
 	display: none;
 	position: absolute;
 }
+
 .teamcard:hover .teamoverlay
 {
 	display: inline-block;
@@ -226,7 +227,7 @@
 }
 .projectcard
 {
-	height: 50%; 
+	height: 48%;
 	background-color: #fff; 
 	position: relative;
 	display: inline-block;
