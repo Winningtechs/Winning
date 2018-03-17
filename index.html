@@ -20,13 +20,13 @@
     <link href="css/colors/common_colors.css" rel="stylesheet" media="screen">                   <!-- Template Color Scheme -->
     <link href="css/colors/red.css" rel="stylesheet" media="screen">                             <!-- Template Colors -->
     <link href="css/responsive.css" rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
-
     <link rel="stylesheet" type="text/css" href="css/base.css" />                                <!-- Webgl -->
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />                               <!-- Webgl -->
-    <link rel="stylesheet" type="text/css" href="pater/pater.css" />                             <!-- Webgl -->
-    <link rel="stylesheet" type="text/css" href="css/scramble_text.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/test.css" />                            <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/scramble_text.css" />                       <!-- scramble text -->
     <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
-
+    <script type='text/javascript' src="js/jquery-1.10.2.min.js"></script>
 
     <!-- Modernizer and IE specyfic files -->
     <script src="js/modernizr.custom.js"></script>
@@ -143,7 +143,6 @@
                     <div class="container" style="width: 500px;">
                         <div class="text"></div>
                     </div>
-
                 </div>
 
             </div>
@@ -151,7 +150,6 @@
                 <img src="img/winning-white.png" width="10%">
             </div>
         </main>
-
 
     </section>
 
@@ -165,7 +163,7 @@
                     <nav id="navigation">
                         <ul>
                             <li class="visible-lg visible-md active"><a href="#about_intro" id="desktop_about">About</a></li>
-							<li class="visible-lg visible-md"><a href="#yoyo" >Projects</a></li>
+							<li class="visible-lg visible-md"><a href="#project" >Projects</a></li>
 							<li class="visible-lg visible-md"><a href="#clients" >Associations</a></li>
 							<li class="visible-lg visible-md"><a href="#team" >Team</a></li>
                             <li class="visible-lg visible-md"><a href="#yoyo" >We are Hiring!</a></li>
@@ -182,9 +180,8 @@
     </section>
 
 
-
+    <!-- ABOUT - INTRO -->
     <section id="about_intro" style="background-color: #f4f4f4">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
@@ -200,61 +197,265 @@
         </div>
     </section>
 
-    <!-- TEAM -->
-    <section id="team" style="background-color: #f4f4f4">
-<!--         <div class="container" style="display: inline-block;">
-           <div class="row">
-				<div class="intro" align="center">
-					<h3>Team</h3>
-					<h5 style="margin-top: -2.5rem;">It takes two flints to make a fire, we are many.</h5>
+    <section id="project" style="background-color: #fff">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 Project_content" style="padding: 0px;" >
+                    <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12 projectcard">
+                    <div class="teamoverlay" id="adda_title" style="cursor: pointer;">
+                    </div>
+                <div class="projectimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
                 </div>
             </div>
-        </div> -->
+            <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12 projectcard">
+                    <div class="teamoverlay" id="shoped_title" style="cursor: pointer;"></div>
+                <div class="projectimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12 projectcard">
+                    <div class="teamoverlay" id="fuelscale_title" style="cursor: pointer;"></div>
+                <div class="projectimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-6 col-xs-12 projectcard">
+                    <div class="teamoverlay" id="baas_title" style="cursor: pointer;"></div>
+                <div class="projectimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+            </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 Project_title" >
+                <h2 class="project_head" id="project_head">Project</h2>
+                <div id="adda" style="padding-left: 5%; padding-right: 5%;">
+                    <h3>1adda</h3>
+                    <p style="margin-top: 5%; text-align: justify; font-family: 'Roboto Mono', monospace; color: #f4f4f4;">1adda is a vision to push startups towards being entreprises. We foster beautiful minds, budding leaders and future entrepreneurs with an integrated ecosystem, consisting of a powerful Mentor Panel, high grade infrastructural support and a well connected community interface.<br>The incubation centre is located in one of the most premier and centrally located areas of Delhi, Greater Kailash-1.<br>We also work very closely with budding student entrepreneurs at the university level, ensuring they put their efforts in the right direction.</p>
+                    <a  href="#" action="_blank"><button class="knowmore" >Know More</button></a>
+                </div>
+                <div id="shoped" style="padding-left: 5%; padding-right: 5%;">
+                    <h3>shoped</h3>
+                    <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto Mono', monospace; color: #f4f4f4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a  href="#" action="_blank"><button class="knowmore" >Know More</button></a>
+                </div>
+                <div id="fuelscale" style="padding-left: 5%; padding-right: 5%;">
+                    <h3>Fuelscale</h3>
+                    <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto Mono', monospace; color: #f4f4f4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a  href="http://www.fuelscale.com/" action="_blank"><button class="knowmore" >Know More</button></a>
+                </div>
+                <div id="baas" style="padding-left: 5%; padding-right: 5%;">
+                    <h3>BaaS</h3>
+                    <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto Mono', monospace; color: #f4f4f4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia6574t nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a  href="#" action="_blank"><button class="knowmore" >Know More</button></a>
+
+                </div>
+
+           </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $('#adda_title').click(function() {
+          $('#adda').css("display","block");
+          $('#project_head').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","none");
+        });
+        $('#shoped_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","block");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","none");
+        });
+        $('#fuelscale_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","block");
+          $('#baas').css("display","none");
+        });
+        $('#baas_title').click(function() {
+          $('#project_head').css("display","none");
+          $('#adda').css("display","none");
+          $('#shoped').css("display","none");
+          $('#fuelscale').css("display","none");
+          $('#baas').css("display","block");
+        });
+    </script>
+
+    <!-- TEAM -->
+    <section id="team" style="background-color: #f4f4f4; padding-bottom: 10%">
 
             <div class="intro" align="center">
                 <h3>Team</h3>
                 <h5 style="margin-top: -2.5rem;">It takes two flints to make a fire, we are many.</h5>
             </div>
             <!-- MEMEBERS - GRID -->
-            <div style="padding-left: 5%;padding-right: 5%;">
-
-            <div class="row" style="margin-top: -4.5rem;">
-            	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="members">
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/caricratures/ak.png" alt="img01"><h6>Ambeek Kumar Khemka</h6><span>CEO</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-2"><img src="images/caricratures/apoorv.png" alt="img01"><h6>Apoorv Shankar</h6><span>CTO</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-3"><img src="images/caricratures/tejinder.png" alt="img01"><h6>Tejinder Singh Mor</h6><span>Research Associate,FuelScale</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-4"><img src="images/caricratures/samarth.png" alt="img01"><h6>Samarth Singh</h6><span>Hardware Engineer</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-5"><img src="images/caricratures/diksha.png" alt="img01"><h6>Diksha Singh</h6><span>Product Analyst, Interim HR</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-6"><img src="images/caricratures/shristi.png" alt="img01"><h6>Shristi Rai</h6><span>Graphic Designer</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-7"><img src="images/caricratures/dikshant.png" alt="img01"><h6>Dikshant Singh</h6><span>Investment Analyst Intern</span></a></div>
-            	<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-8"><img src="images/caricratures/gagan.png" alt="img01"><h6>Gagan Kotiya</h6><span>Investment Analyst Intern</span></a></div>
-				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-9"><img src="images/caricratures/shrey.png" alt="img01"><h6>Shrey Sharma</h6><span>Web Developer Intern</span></a></div>
-				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-10"><img src="images/caricratures/abhijeet.png" alt="img01"><h6>Abhijeet Kumar</h6><span>Web Developer</span></a></div>
-				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-11"><img src="images/caricratures/nikhil.png" alt="img01"><h6>Nikhil K Mishra</h6><span>Backend Developer</span></a></div>
-				<div class="item effect"><a href="#" class="md-trigger" data-modal="modal-12"><img src="images/members/member3.jpg" alt="img01"><h6>This can be you !</h6></a></div>
-				</div>
+        <div class="col-lg-12" style="height: auto; background-color: #f4f4f4; padding-left: 5%; padding-right: 5%;">
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
             </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder2</h6>
+                </div>
             </div>
-        </div> 
-
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founde34r</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder4</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder5</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder6</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 col-md-6 col-xs-12 teamcard">
+                <a href="#" class="md-trigger" data-modal="modal-1">
+                    <div class="teamoverlay" style="cursor: pointer;"></div>
+                </a>
+                <div class="teamimg">
+                    <img src="images/members/ambeek.png" alt="img01" width="100%" style="align-items: center;">
+                </div>
+                <div>
+                    <h5 class="texmcaption" ">Ambeek Khemka</h5>
+                    <h6 class="texmcaption" ">Founder</h6>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <!-- Advisors -->
-
-    <section id="portfolio_intro" style="background-color: #f4f4f4; padding-top: 10%;" >
-
+    <section id="portfolio_intro" style="background-color: #f4f4f4" >
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" style="height: 16.25rem;" >
-					<h2 style="line-height: 0.875rem;"><br class="visible-lg visible-md visable-sm"> ADVISORS</h2>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 title_big" >
+					<h2><br class="visible-lg visible-md visable-sm"> ADVISORS</h2>
                 </div>
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content1" style="max-width: 60vw; margin-left: -5%;" >
-							<div class="row">
-
-							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio h2_element" style="list-style-type: none;" >
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content1" style="max-width: 60vw" >
+					<div class="container-fluid" >
+						<div class="row">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio h2_element"  >
 								<div class="portfolio_controls">
-									<div class="customNavigation" style="margin-top: 45%;">
+									<div class="customNavigation">
 										<a href="#" class="button arrow_right arrow_right_v1 btn next"><div data-icon="&#xe105;" class="button_icon arrow_right_icon"></div></a>
 										<a href="#" class="button arrow_left arrow_left_v1 btn prev"><div data-icon="&#xe107;" class="button_icon arrow_left_icon"></div></a>
 									</div>
@@ -262,19 +463,20 @@
 							</div>
 							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 portfolio_items" >
 								<div id="owl-gallery" class="owl-carousel owl-theme">
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/grass.jpg" alt="img01"><h6 style="font-size: 17px">Venugopal Konchada</h6><span style="font-size: 15px">CEO, Vmart</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work2.jpg" alt="img01"><h6 style="font-size: 17px">Siddharth Tripathy</h6><span style="font-size: 15px">Director, Healthify.me</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work3.jpg" alt="img01"><h6 style="font-size: 17px">Rajeev Mangla</h6><span style="font-size: 15px">Ex-CTO, Snapdeal</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work4.jpg" alt="img01"><h6 style="font-size: 17px">Dr. Deepak Pandit</h6><span style="font-size: 15px">Co-founder, iSEED</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work5.jpg" alt="img01"><h6 style="font-size: 17px">Subhashis Nath</h6><span style="font-size: 15px">ED, Axis Risk Consulting</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work6.jpg" alt="img01"><h6 style="font-size: 17px">Inderjit Singh Barara</h6><span style="font-size: 15px">CSI</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work7.jpg" alt="img01"><h6 style="font-size: 17px">Pavan Duggal</h6><span style="font-size: 15px">Cyberlaws.Net</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6 style="font-size: 17px">Rakesh Kapoor</h6><span style="font-size: 15px">CEO, NHHFDL</span></a></div>
-									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6 style="font-size: 17px">Harish Saraf</h6><span style="font-size: 15px">Director, Nippon Data</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/grass.jpg" alt="img01"><h6>Venugopal Konchada</h6><span>CEO, Vmart</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work2.jpg" alt="img01"><h6>Siddharth Tripathy</h6><span>Director, Healthify.me</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work3.jpg" alt="img01"><h6>Rajeev Mangla</h6><span>Ex-CTO, Snapdeal</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work4.jpg" alt="img01"><h6>Dr. Deepak Pandit</h6><span>Co-founder, iSEED</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work5.jpg" alt="img01"><h6>Subhashis Nath</h6><span>Executive Director, Axis Risk Consulting</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work6.jpg" alt="img01"><h6>Col.Inderjit Singh Barara</h6><span>CSI</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work7.jpg" alt="img01"><h6>Pavan Duggal</h6><span>Cyberlaws.Net</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Rakesh Kapoor</h6><span>CEO, NHHFDL</span></a></div>
+									<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Harish Saraf</h6><span>Director, Nippon Data</span></a></div>
+                                    <div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>CCC Saraf</h6><span>Director, Nippon Data</span></a></div>
 								</div>
 							</div>
-							</div>
-
+						</div>
+					</div>
 
 
                 </div>
@@ -283,8 +485,37 @@
     </section>
 
 
-    <!-- CLIENTS -->
+    <!-- PORTFOLIO - CAROUSEL -->
+    <section id="portfolio" >
+        <!--<div class="container-fluid" style="max-width: 50vw">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 title_big_portfolio h2_element"  >-->
+	                <!--<div class="portfolio_controls">-->
+						<!--<div class="customNavigation">-->
+						<!--<a href="#" class="button arrow_right arrow_right_v1 btn next"><div data-icon="&#xe105;" class="button_icon arrow_right_icon"></div></a>-->
+						<!--<a href="#" class="button arrow_left arrow_left_v1 btn prev"><div data-icon="&#xe107;" class="button_icon arrow_left_icon"></div></a>-->
+						<!--</div>-->
+					<!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 portfolio_items" >-->
+	                <!--<div id="owl-gallery" class="owl-carousel owl-theme">-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/grass.jpg" alt="img01"><h6>Venugopal Konchada</h6><span>CEO, Vmart</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work2.jpg" alt="img01"><h6>Siddharth Tripathy</h6><span>Director, Healthify.me</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work3.jpg" alt="img01"><h6>Rajeev Mangla</h6><span>Ex-CTO, Snapdeal</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work4.jpg" alt="img01"><h6>Dr. Deepak Pandit</h6><span>Co-founder, iSEED</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work5.jpg" alt="img01"><h6>Subhashis Nath</h6><span>Executive Director, Axis Risk Consulting</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work6.jpg" alt="img01"><h6>Col.Inderjit Singh Barara</h6><span>CSI</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work7.jpg" alt="img01"><h6>Pavan Duggal</h6><span>Cyberlaws.Net</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Rakesh Kapoor</h6><span>CEO, NHHFDL</span></a></div>-->
+						<!--<div class="owl-item effect"><a href="#" class="md-trigger" data-modal="modal-1"><img src="images/portfolio/work8.jpg" alt="img01"><h6>Harish Saraf</h6><span>Director, Nippon Data</span></a></div>-->
+					<!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
 
+
+    <!-- CLIENTS -->
     <section id="clients" style="background-color: #f4f4f4">
         <div class="container">
             <div class="row">
@@ -302,6 +533,8 @@
             </div>
         </div>
     </section>
+
+
 
 
     <!-- SEPARATOR - PARALLAX -->
@@ -347,7 +580,7 @@
 	                    </div>
 	                </div>
                 </div>
-                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 contact_address" style="padding-top: -10rem; margin-bottom: -4rem;">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 contact_address" style="padding-top: -10rem;">
                 	<div class="content">
                 		<!-- CONTACT INFO -->
 	                	<div data-icon="&#xe1b4;" class="contact_icon"></div>
@@ -358,7 +591,7 @@
 	                	<h5>011 2923 3328</h5>
 
 	                	<div data-icon="&#xe242;" class="contact_icon"></div>
-	                	<h5><a href="mailto:connect@winningtechs.com">connect@winningtechs.com</a></h5>
+	                	<h5><a href="mailto:contact@alexa.com">contact@winningtechs.com</a></h5>
 					</div>
                 </div>
             </div>
@@ -426,7 +659,7 @@
 			<div class="modal_text">
 			<div class="centered_text">
 				<h6>CEO</h6>
-				<h3 style="font-size: 40px;">Ambeek Kumar Khemka</h3>
+				<h3>Ambeek Kumar Khemka</h3>
 				<p>Serial Entrepreneur and have gained rich and enviable experiences in various sectors and Industries.</p>
 				<div class="social_icons">
 	                <ul>
@@ -449,7 +682,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>CTO</h6>
-				<h3 style="font-size: 40px;">Apoorv Shankar</h3>
+				<h3>Apoorv Shankar</h3>
 				<p>Drinking cups of technology since 1994.<br>I believe in building. Be it a technology,<br>a company, relations or the world.</p>
 				<div class="social_icons">
 	                <ul>
@@ -471,7 +704,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Research Associate, FuelScale</h6>
-				<h3 style="font-size: 40px;">Tejinder Singh Mor</h3>
+				<h3>Tejinder Singh Mor</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
 				<div class="social_icons">
 	                <ul>
@@ -493,7 +726,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Hardware Engineer</h6>
-				<h3 style="font-size: 40px;">Samarth Singh</h3>
+				<h3>Samarth Singh</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
 				<div class="social_icons">
 	                <ul>
@@ -514,8 +747,8 @@
 			<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
 			</div>
 			<div class="modal_text">
-				<h6>Product Analyst, Interim HR</h6>
-				<h3 style="font-size: 40px;">Diksha Singh</h3>
+				<h6>Diksha Singh</h6>
+				<h3>Product Analyst, Interim HR</h3>
 				<p>I love turning coffee into code. I have a product that can help you brew your business into a huge success. Join us for a cup of coffee and I can tell you all about it.</p>
 				<div class="social_icons">
 	                <ul>
@@ -537,7 +770,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Graphic Designer</h6>
-				<h3 style="font-size: 40px;">Shristi Rai</h3>
+				<h3>Shristi Rai</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
 				<div class="social_icons">
 	                <ul>
@@ -559,7 +792,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Investment Analyst Intern</h6>
-				<h3 style="font-size: 40px;">Dikshant Singh</h3>
+				<h3>Dikshant Singh</h3>
 				<p>Working with the Cryptocurrency Market to grow the Investment fund in every possible way.</p>
 				<div class="social_icons">
 	                <ul>
@@ -581,7 +814,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Investment Analyst Intern</h6>
-				<h3 style="font-size: 40px;">Gagan Kotiya</h3>
+				<h3>Gagan Kotiya</h3>
 				<p>Working with the Cryptocurrency Market to grow the Investment fund.</p>
 				<div class="social_icons">
 	                <ul>
@@ -597,13 +830,13 @@
 	<!-- MODAL BOX - MEMBER 9 -->
 	<div class="md-modal md-effect-1 modal-member" id="modal-9">
 		<div class="md-content">
-			<div class="member_photo"><img src="images/test.png" alt="img01"></div>
+			<div class="member_photo"><img src="images/members/member8@2x.jpg" alt="img01"></div>
 			<div class="modal_close_button">
 				<a href="#" class="button close close_v2 md-close"><div data-icon="&#xe10f;" class="button_icon close_icon"></div></a>
 			</div>
 			<div class="modal_text">
 				<h6>Web Developer Intern</h6>
-				<h3 style="font-size: 40px;">Shrey Sharma</h3>
+				<h3>Shrey Sharma</h3>
 				<p>Front and Back are the two ends I make try to meet.</p>
 				<div class="social_icons">
 					<ul>
@@ -625,7 +858,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Web Developer</h6>
-				<h3 style="font-size: 40px;">Abhijeet Kumar</h3>
+				<h3>Abhijeet Kumar</h3>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
 				<div class="social_icons">
 					<ul>
@@ -647,7 +880,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>New bussiness</h6>
-				<h3 style="font-size: 40px;">Nikhil K Mishra</h3>
+				<h3>Nikhil K Mishra</h3>
 				<p>Working behind the scenes.</p>
 				<div class="social_icons">
 					<ul>
@@ -668,7 +901,7 @@
 			</div>
 			<div class="modal_text">
 				<h6>Hey Curious fellow</h6>
-				<h3 style="font-size: 40px;">This can be you !</h3>
+				<h3>This can be you !</h3>
 				<p>Come join the Winning family.</p>
 				<div class="social_icons">
 					<ul>
