@@ -205,13 +205,19 @@
 {
 	transform: scale(0.8);
 	transition: all 0.35s ease-in-out;
-	z-index: 1;
-}
+/*	z-index: 1;
+*/}
 .teamcaption
 {
 	text-align: center;
 }
-.teamoverlay
+.projectoverlay
+{	
+	width: 100%; height: 100%; background-color: #ec212194; 
+	display: none;
+	position: absolute;
+}
+.teamoverlay 
 {
 	width: 100%; height: 100%; background-color: #ec212194; margin-left: -15px; 
 	display: none;
