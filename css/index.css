@@ -205,8 +205,9 @@
 {
 	transform: scale(0.8);
 	transition: all 0.35s ease-in-out;
+	z-index: 1;
 }
-.texmcaption
+.teamcaption
 {
 	text-align: center;
 }
@@ -229,8 +230,8 @@
 {
 	height: 48%;
 	background-color: #fff; 
-	position: relative;
-	display: inline-block;
+/*	position: relative;
+*/	display: inline-block;
 }
 .projectimg
 {
