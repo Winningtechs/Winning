@@ -10,7 +10,7 @@
 }
 .Project_content
 {
-	background-color: #fff;	
+	background-color: #f4f4f4;
 	display: inline-block;
 	height: 90vh;
 	font-family: 'Roboto Mono', monospace;
@@ -234,8 +234,8 @@
 }
 .projectcard
 {
-	height: 48%;
-	background-color: #fff; 
+	height: 50%;
+	background-color: #f4f4f4;
 /*	position: relative;
 */	display: inline-block;
 }
