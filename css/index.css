@@ -241,20 +241,20 @@
 {
 	display: inline-block;
 }
-@media only screen
-and (min-width : 1224px)
-{
-	.Project_title 
+#projectmobile
 	{
-		height: auto;
+		display:none;
 	}
-}
-/*Mobile view*/
 @media only screen and (max-width: 500px) 
 {
-	.Project_title 
+	#project
 	{
-		height: auto;
+		display: none;
+	}
+	#projectmobile
+	{
+		display: block;
+		background-color: #f4f4f4;
 	}
 }
 
