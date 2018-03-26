@@ -1,4 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+
 .container {
   height: 100%;
   width: 500%;
@@ -13,6 +15,15 @@
         color: #fafafa;
         text-align: center;
       }
+
+
+@media only screen and (max-width: 500px)
+{
+    .text{
+        font-size: 52px;
+    }
+}
+
 .dud {
   color: #fafafa;
 }
@@ -23,3 +34,4 @@
     position: relative;
     margin-left: -70vw;
 }
+

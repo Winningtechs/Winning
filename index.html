@@ -60,6 +60,18 @@
               text-align: center;
               line-height: 10px;
           }
+          @media only screen and (max-width: 500px)
+          {
+              .laptop_team{
+                  display: none;
+              }
+          }
+          @media only screen and (min-width: 501px)
+          {
+              .mobile_team{
+                  display: none;
+              }
+          }
       </style>
 
 
@@ -201,36 +213,36 @@
                 <div style="padding-left: 3%;">
 
                     <div class="col-sm-6 col-md-6 col-xs-6">
-                        <div class="projectoverlay" ></div>
+                        <!--<div class="projectoverlay" ></div>-->
                         <div class="projectimg">
-                            <a href="#" class="md-trigger" data-modal="modal-13">
+                            <a href="#" class="md-trigger-mob" data-modal="modal-13">
                                 <img src="images/projects/adda.png" width="100%">
                             </a>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-xs-6">
-                        <div class="projectimg"r;">
-                            <a href="#" class="md-trigger" data-modal="modal-14">
+                        <div class="projectimg">
+                            <a href="#" class="md-trigger-mob" data-modal="modal-14">
                                 <img src="images/projects/shoped.png" alt="Shoped" width="100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-xs-6">
-                        <div class="projectimg" ter;">
-                            <a href="#" class="md-trigger" data-modal="modal-15">
+                        <div class="projectimg" >
+                            <a href="#" class="md-trigger-mob" data-modal="modal-15">
                                 <img src="images/projects/fuelscale.png" alt="FuelScale" width="100%">
                             </a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-xs-6">
                         <div class="projectimg">
-                            <a href="#" class="md-trigger" data-modal="modal-16">
+                            <a href="#" class="md-trigger-mob" data-modal="modal-16">
                                 <img src="images/projects/BaaS.png" width="100%" alt="Blockchain as a Service">
                             </a>
                         </div>
                     </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -239,7 +251,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 Project_content" style="padding: 0px;" >
 
-                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 projectcard">
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6 projectcard" >
                         <div class="projectoverlay" ></div>
                         <div class="projectimg" id="adda_title" style="cursor: pointer;">
                             <img src="images/projects/adda.png" width="100%">
@@ -281,7 +293,7 @@
                         </div>
                         <div id="baas" style="padding-left: 5%; padding-right: 5%;padding-top: 5%;">
                             <h3>BaaS</h3>
-                            <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise/developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of business blockchain technologies including distributed ledger platforms, smart contract engines and digital assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
+                            <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of business blockchain technologies including distributed ledger platforms, smart contract engines and digital assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
                             <a  href="coming.html" target="_blank"><button class="knowmore" style="margin-top: 1%;" >Know More</button></a>
                         </div>
 
@@ -328,7 +340,7 @@
             </div>
             <!-- MEMEBERS - GRID -->
         <div class="col-lg-12" style="height: auto; background-color: #f4f4f4; padding-left: 5%; padding-right: 5%;">
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-1">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -340,7 +352,7 @@
                     <h6 class="teamcaption" style="font-size: 80%;">Founder</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-2">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -352,7 +364,7 @@
                     <h6 class="teamcaption" style="font-size: 80%;">Co-Founder</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-3">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -360,23 +372,23 @@
                     <img src="images/caricratures/tejinder.jpg" alt="Tejinder" width="100%" style="align-items: center;">
                 </div>
                 <div>
-                    <h6 class="teamcaption">Tejinder Singh Mor</h6>
+                    <h6 class="teamcaption">Tejinder Mor</h6>
                     <h6 class="teamcaption" style="font-size: 80%;">Research Associate</h6>
                 </div>
             </div>
-<!--             <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
-                <a href="#" class="md-trigger" data-modal="modal-4">
-                    <div class="teamoverlay" style="cursor: pointer;"></div>
-                </a>
-                <div class="teamimg">
-                    <img src="images/caricratures/samarth.jpg" alt="Samarth" width="100%" style="align-items: center;">
-                </div>
-                <div>
-                    <h6 class="teamcaption">Samarth Singh</h6>
-                    <h6 class="teamcaption" style="font-size: 80%">Hardware Engineer</h6>
-                </div>
-            </div> -->
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+             <!--<div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">-->
+                <!--<a href="#" class="md-trigger" data-modal="modal-4">-->
+                    <!--<div class="teamoverlay" style="cursor: pointer;"></div>-->
+                <!--</a>-->
+                <!--<div class="teamimg">-->
+                    <!--<img src="images/caricratures/samarth.jpg" alt="Samarth" width="100%" style="align-items: center;">-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<h6 class="teamcaption">Samarth Singh</h6>-->
+                    <!--<h6 class="teamcaption" style="font-size: 80%">Hardware Engineer</h6>-->
+                <!--</div>-->
+            <!--</div> -->
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-5">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -388,7 +400,7 @@
                     <h6 class="teamcaption" style="font-size: 80%">Product Analyst</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-6">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -400,7 +412,7 @@
                     <h6 class="teamcaption" style="font-size: 80%">Investment Analyst Intern</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-7">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -412,7 +424,7 @@
                     <h6 class="teamcaption" style="font-size: 80%">Investment Analyst Intern</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-8">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -424,7 +436,7 @@
                     <h6 class="teamcaption" style="font-size: 80%">Graphic Designer</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-9">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -436,7 +448,7 @@
                     <h6 class="teamcaption" style="font-size: 80%;">Web Developer Intern</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-10">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -448,7 +460,7 @@
                     <h6 class="teamcaption" style="font-size: 80%;">Back-End Developer</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-11">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -457,10 +469,11 @@
                 </div>
                 <div>
                     <h6 class="teamcaption">Abhijeet Kumar</h6>
-                    <h6 class="teamcaption" style="font-size: 80%;">Web Developer</h6>
+                    <h6 class="teamcaption laptop_team" style="font-size: 80%;">Web Developer</h6>
+                    <h6 class="teamcaption mobile_team" style="font-size: 80%;">Web<br>Developer</h6>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 teamcard">
+            <div class="col-lg-3 col-sm-3 col-md-3 col-xs-6 teamcard">
                 <a href="#" class="md-trigger" data-modal="modal-12">
                     <div class="teamoverlay" style="cursor: pointer;"></div>
                 </a>
@@ -617,17 +630,15 @@
                     <span>Copyright © 2018 Winning Technologies Private Limited</span>
                     <div class="social_icons">
                     <ul>
-                        <li><div data-icon="&#xe242;" class="social_icon mail_icon" onclick="window.open('mailto:connect@winningtechs.com','_blank')"></div></li>
-                        <li><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="window.open('https://www.facebook.com/Winningtechs/','_blank')"></div></li>
-                        <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="window.open('https://www.linkedin.com/company/13631994/','_blank')"></div></li>
-                        <li><div class="social_icon fa fa-angellist" style="font-size: 20px" onclick="window.open('https://angel.co/winning-technologies-private','_blank')"></div></li>
+                        <li><div class="social_icon fa fa-envelope-o" onclick="window.open('mailto:connect@winningtechs.com','_blank')"></div></li>
+                        <li><div class="social_icon fa fa-facebook" onclick="window.open('https://www.facebook.com/Winningtechs/','_blank')"></div></li>
+                        <li><div class="social_icon fa fa-linkedin"  onclick="window.open('https://www.linkedin.com/company/13631994/','_blank')"></div></li>
+                        <li><div class="social_icon fa fa-angellist" onclick="window.open('https://angel.co/winning-technologies-private','_blank')"></div></li>
                     </ul>
                     </div>
 
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer_arrow_container" >
-                    <a href="#home" class="button arrow_up arrow_up_v1"><div data-icon="&#xe106;" class="button_icon arrow_up_icon"></div></a>
-                </div>
+
             </div>
             <hr style="margin-top: 1rem; padding-bottom: 0;">
             <div class="flex-container" style="margin-top: -4rem;">
@@ -636,7 +647,6 @@
                 <div><a style="color: white; text-decoration: none" href="#">Press</a></div>
                 <div><a style="color: white; text-decoration: none" href="#">Blog</a></div>
                 <div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Policies</a></div>
-                <div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Research Papers</a></div>
                 <div style="flex-grow:0.1"><a style="color: white; text-decoration: none" href="#">Whitepapers</a></div>
 
             </div>
@@ -930,14 +940,14 @@
             <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">1adda is a vision to push startups towards being enterprises.<br>We foster beautiful minds, budding leaders and future entrepreneurs with an integrated ecosystem, consisting of a powerful Mentor Panel, high grade infrastructural support and a well connected community interface.<br>The incubation centre is located in one of the most premier and centrally located areas of Delhi, Greater Kailash-1.<br>We also work very closely with budding student entrepreneurs at the university level, ensuring they put their efforts in the right direction.</p>
             <a  href="coming.html" target="_blank"><button class="knowmore" >Know More</button></a>
     </div>
-        <!-- Project Modal fuelscale -->
+        <!-- Project Modal Shoped -->
 
     <div class="md-modal md-effect-1 modal-member" id="modal-14">
         <h3 style="color: #f4f4f4;">Shoped</h3>
             <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">We are building 'Shoped'. A platform to connect Brand, Retailer, Consumer and the Service Ecosystem. Shoped will solve the pain of brand to reach out consumers, the pain of consumer to avail post-sales services and will generate a real-time analysis of Sales patterns, consumer behaviour and product lifecycle<br>It happens through creating a Blockchain enabled platform to track Proof-of-Existence, Proof-of-Sale, Proof-of-Ownership, and Proof-of-Service of a product. As it is all stored in an immutable ledger, Every product is tracked from the generation, until disposal, thus creating an audit trail.</p>
             <a  href="coming.html" target="_blank"><button class="knowmore" >Know More</button></a>
     </div>
-        <!-- Project Modal shoped -->
+        <!-- Project Modal FuelScale -->
 
     <div class="md-modal md-effect-1 modal-member" id="modal-15">
         <h3 style="color: #f4f4f4;">FuelScale</h3>
@@ -948,7 +958,7 @@
 
     <div class="md-modal md-effect-1 modal-member" id="modal-16">
         <h3 style="color: #f4f4f4;">Baas</h3>
-            <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise/developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of business blockchain technologies including distributed ledger platforms, smart contract engines and digital assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
+            <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of business blockchain technologies including distributed ledger platforms, smart contract engines and digital assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
             <a  href="coming.html" target="_blank"><button class="knowmore" >Know More</button></a>
     </div>
 
