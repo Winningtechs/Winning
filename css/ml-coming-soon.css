@@ -20,7 +20,7 @@ html {
 
 body {
 	background-color: #444;
-	background-image: url(../images/comingImg/blurred-bg.png);
+	background-image: url(../images/blurred-bg.png);
 }
 
 ::selection {

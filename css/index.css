@@ -257,4 +257,20 @@
 		background-color: #f4f4f4;
 	}
 }
+/*IPad view*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) 
+{
+	#project
+	{
+		display: none;
+	}
+	#projectmobile
+	{
+		display: block;
+		background-color: #f4f4f4;
+	}
+}
 
