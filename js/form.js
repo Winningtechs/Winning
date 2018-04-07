@@ -8,7 +8,7 @@ $(document).ready(function() {
                 if(fID=="#subscribe"){
                    var jData = {"email":jQuery("#fdata").val(),"subsType":101}
                 }
-                $.ajax(console.log(jQuery("#fdata").val()), {
+                $.ajax({
                     url: "http://159.122.169.245:5000/api/v1/subscription?apiKey=sLLf33UNNgBRBqmOsXBVgBtubT1ynREKdHWH7OYiOxmo6zFkvMbEVlLmbaMwI6wR",
                     type: "POST",
                     dataType: "JSON",
