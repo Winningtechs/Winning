@@ -4,7 +4,7 @@ $(document).ready(function() {
             submitHandler: function(form) {
                 var clikedForm = $(form);
                 var fID = "#" + clikedForm.attr('id');
-                console.log(fID);
+                
                 if(fID=="#subscribe"){
                    var jData = {"email":jQuery("#fdata").val(),"subsType":101}
                 }
@@ -15,14 +15,14 @@ $(document).ready(function() {
                     contentType: "application/json",
                     data: JSON.stringify(jData),
                     success: function (response) {
-                        console.log(response);
+                        
                         if(response["result"]=="OK"){
-                            console.log("OK");
+
                             $("#no").text("Thank you for subscribing").css("color","white");
 
 
                         }else{
-                            console.log("Invalid");
+                            
                             $("#no").text(response["result"]).css("color","red");
                         }
                     }
