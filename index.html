@@ -23,7 +23,7 @@
     <link href="css/responsive.css" rel="stylesheet" media="screen">                             <!-- Responsive Fixes -->
     <link rel="stylesheet" type="text/css" href="css/base.css" />                                <!-- Webgl -->
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />                               <!-- Webgl -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/test.css" />                            <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/scramble_text.css" />                       <!-- scramble text -->
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> <!--Roboto font-->
@@ -32,7 +32,33 @@
 
     <!-- Modernizer and IE specyfic files -->
     <script src="js/modernizr.custom.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+          $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
 
+                  // Make sure this.hash has a value before overriding default behavior
+                  if (this.hash !== "") {
+                      // Prevent default anchor click behavior
+                      event.preventDefault();
+
+                      // Store hash
+                      var hash = this.hash;
+
+                      // Using jQuery's animate() method to add smooth page scroll
+                      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                      $('html, body').animate({
+                          scrollTop: $(hash).offset().top
+                      }, 800, function(){
+
+                          // Add hash (#) to URL when done scrolling (default click behavior)
+                          window.location.hash = hash;
+                      });
+                  } // End if
+              });
+          });
+      </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,6 +80,9 @@
               display: flex;
               justify-content: center;
           }
+
+
+
           .flex-container > div {
               width: 110px;
               margin: 10px;
@@ -102,7 +131,7 @@
         </div>
         <nav id="mobile_menu_content">
             <a href="#about_intro" >About</a>
-            <a href="#project" >Projects</a>
+            <a href="#projectmobile" >Projects</a>
             <a href="#team" >Team</a>
             <a href="#clients" >Associations</a>
             <a href="#" >We are Hiring</a>
@@ -154,10 +183,23 @@
 
             </div>
             <div class="logowebgl">
-                <img src="images/winning-white.png" width="10%">
-            </div>
-        </main>
+                <img src="images/winning-white.png" width="10%"><br>
 
+            </div>
+
+
+
+        </main>
+            <div class="laptop_team" style="position: absolute;top: 90%; margin-left: 47.5%;">
+                <a  href="#desktop_about" class ="fa fa-chevron-down" style="color: white;  font-size: 30px; text-align: center;"></a>
+                <br>
+                <span > Scroll down </span>
+            </div>
+
+        <div class="mobile_team" style="position: absolute;top: 93%; margin-left: 45%; ">
+            <a  href="#desktop_about" class ="fa fa-chevron-down" style="color: white;  font-size: 35px; text-align: center; z-index: 100;"></a>
+
+        </div>
     </section>
 
 
@@ -171,6 +213,7 @@
                         <ul>
                             <li class="visible-lg visible-md active"><a href="#about_intro" id="desktop_about">About</a></li>
                             <li class="visible-lg visible-md"><a href="#project" >Projects</a></li>
+
                             <li class="visible-lg visible-md"><a href="#team">Team</a></li>
                             <li class="visible-lg visible-md"><a href="#clients" >Associations</a></li>
                             <li class="visible-lg visible-md"><a href="#yoyo" >We are Hiring!</a></li>
@@ -196,7 +239,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 title_content" >
                     <div class="content" style="display: unset;">
-                        <h5 align="center">We are a diverse collection of thinkers and doers, believing in innovation we have been continually reimagining what’s possible to help us all do what we love in new ways.</h5>
+                        <h5 align="center" style="color:#F90706;">We are a diverse collection of thinkers and doers, believing in innovation we have been continually reimagining what’s possible to help us all do what we love in new ways.</h5>
                         <p align="center">Focusing currently on IoT and Blockchain, Winning Technologies believes in the power of research and ideas, we foster innovation and build next generation products out of it. And the same passion for innovation that goes into our products also applies to our practices: strengthening our commitment to leave the world better than we found it.</p>
                     </div>
                 </div>
@@ -293,7 +336,7 @@
                         </div>
                         <div id="baas" style="padding-left: 5%; padding-right: 5%;padding-top: 5%;">
                             <h3>BaaS</h3>
-                            <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of business blockchain technologies including distributed ledger platforms, smart contract engines and digital assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
+                            <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.</p>
                             <a  href="coming.html" target="_blank"><button class="knowmore" style="margin-top: 1%;" >Know More</button></a>
                         </div>
 
@@ -634,6 +677,8 @@
                         <li><div class="social_icon fa fa-facebook" onclick="window.open('https://www.facebook.com/Winningtechs/','_blank')"></div></li>
                         <li><div class="social_icon fa fa-linkedin"  onclick="window.open('https://www.linkedin.com/company/13631994/','_blank')"></div></li>
                         <li><div class="social_icon fa fa-angellist" onclick="window.open('https://angel.co/winning-technologies-private','_blank')"></div></li>
+                        <li><div class="social_icon fa fa-twitter" onclick="window.open('#','_blank')"></div></li>
+
                     </ul>
                     </div>
 
@@ -678,7 +723,7 @@
             <div class="modal_text">
             <div class="centered_text">
                 <h6>Founder</h6>
-                <h3 style="font-size: 2.5rem">Ambeek Kumar Khemka</h3>
+                <h3 style="font-size: 1.5rem">Ambeek Kumar Khemka</h3>
                 <p>Serial Entrepreneur and have gained rich and enviable experiences in various sectors and Industries.</p>
                 <div class="social_icons">
                     <ul>
@@ -701,7 +746,7 @@
             </div>
             <div class="modal_text">
                 <h6>Co-Founder</h6>
-                <h3 style="font-size: 2.5rem">Apoorv Shankar</h3>
+                <h3 style="font-size: 1.5rem">Apoorv Shankar</h3>
                 <p>Drinking cups of technology since 1994.<br>I believe in building. Be it a technology,<br>a company, relations or the world.</p>
                 <div class="social_icons">
                     <ul>
@@ -723,7 +768,7 @@
             </div>
             <div class="modal_text">
                 <h6>Research Associate, FuelScale</h6>
-                <h3 style="font-size: 2.5rem">Tejinder Singh Mor</h3>
+                <h3 style="font-size: 1.5rem">Tejinder Singh Mor</h3>
                 <p>Researching and introducing new dimensions in remote monitoring technologies.</p>
                 <div class="social_icons">
                     <ul>
@@ -745,7 +790,7 @@
             </div>
             <div class="modal_text">
                 <h6>Hardware Engineer</h6>
-                <h3 style="font-size: 2.5rem">Samarth Singh</h3>
+                <h3 style="font-size: 1.5rem">Samarth Singh</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
                 <div class="social_icons">
                     <ul>
@@ -758,6 +803,8 @@
     </div>
 
 
+
+
     <!-- MODAL BOX - MEMBER 5 -->
     <div class="md-modal md-effect-1 modal-member" id="modal-5">
         <div class="md-content">
@@ -767,7 +814,7 @@
             </div>
             <div class="modal_text">
                 <h6>Product Analyst, Interim HR</h6>
-                <h3 style="font-size: 2.5rem">Diksha Singh</h3>
+                <h3 style="font-size: 1.5rem">Diksha Singh</h3>
                 <p>I love turning coffee into code. I have a product that can help you brew your business into a huge success. Join us for a cup of coffee and I can tell you all about it.</p>
                 <div class="social_icons">
                     <ul>
@@ -789,7 +836,7 @@
             </div>
             <div class="modal_text">
                 <h6>Investment Analyst Intern</h6>
-                <h3 style="font-size: 2.5rem">Dikshant Singh</h3>
+                <h3 style="font-size: 1.5rem ">Dikshant Singh</h3>
                 <p>Working with the Cryptocurrency Market to grow the Investment fund in every possible way.</p>
                 <div class="social_icons">
                     <ul>
@@ -811,7 +858,7 @@
             </div>
             <div class="modal_text">
                 <h6>Investment Analyst Intern</h6>
-                <h3 style="font-size: 2.5rem">Gagan Kotiya</h3>
+                <h3 style="font-size: 1.5rem">Gagan Kotiya</h3>
                 <p>Working with the Cryptocurrency Market to grow the Investment fund.</p>
                 <div class="social_icons">
                     <ul>
@@ -833,7 +880,7 @@
             </div>
             <div class="modal_text">
                 <h6>Graphic Designer</h6>
-                <h3 style="font-size: 2.5rem">Shristi Rai</h3>
+                <h3 style="font-size: 1.5rem">Shristi Rai</h3>
                 <p>My life is more like dots,line and graphic designs.</p>
                 <div class="social_icons">
                     <ul>
@@ -855,7 +902,7 @@
             </div>
             <div class="modal_text">
                 <h6>Web Developer Intern</h6>
-                <h3 style="font-size: 2.5rem">Shrey Sharma</h3>
+                <h3 style="font-size: 1.5rem">Shrey Sharma</h3>
                 <p>Front and Back are the two ends I make try to meet.</p>
                 <div class="social_icons">
                     <ul>
@@ -877,7 +924,7 @@
             </div>
             <div class="modal_text">
                 <h6>Backend Developer</h6>
-                <h3 style="font-size: 2.5rem">Nikhil K Mishra</h3>
+                <h3 style="font-size: 1.5rem">Nikhil K Mishra</h3>
                 <p>Working behind the scenes.</p>
                 <div class="social_icons">
                     <ul>
@@ -899,7 +946,7 @@
             </div>
             <div class="modal_text">
                 <h6>Web Developer</h6>
-                <h3 style="font-size: 2.5rem">Abhijeet Kumar</h3>
+                <h3 style="font-size: 1.5rem">Abhijeet Kumar</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sum dolor si scinadipi elitummy.</p>
                 <div class="social_icons">
                     <ul>
@@ -921,7 +968,7 @@
             </div>
             <div class="modal_text">
                 <h6>Community Manager</h6>
-                <h3 style="font-size: 2.5rem">Naman Goel</h3>
+                <h3 style="font-size: 1.5rem">Naman Goel</h3>
                 <p>Come join the Winning family.</p>
                 <div class="social_icons">
                     <ul>
@@ -932,6 +979,8 @@
             </div>
         </div>
     </div>
+
++
 
     <!-- Project Modal 1adda -->
 
