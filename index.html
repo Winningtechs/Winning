@@ -186,20 +186,25 @@
                 <img src="images/winning-white.png" width="10%"><br>
 
             </div>
-
-
-
         </main>
-            <div class="laptop_team" style="position: absolute;top: 90%; margin-left: 47.5%;">
-                <a  href="#desktop_about" class ="fa fa-chevron-down" style="color: white;  font-size: 30px; text-align: center;"></a>
-                <br>
-                <span > Scroll down </span>
-            </div>
 
-        <div class="mobile_team" style="position: absolute;top: 93%; margin-left: 45%; ">
+        <span class="scroll-btn">
+	        <a href="#about_intro">
+		        <span class="mouse ">
+			<span>
+			</span>
+		    </span>
+	        </a>
+            <p style="color:black">scroll me</p>
+
+        </span>
+
+
+
+        <!--div class="mobile_team" style="position: absolute;top: 93%; margin-left: 45%; ">
             <a  href="#desktop_about" class ="fa fa-chevron-down" style="color: white;  font-size: 35px; text-align: center; z-index: 100;"></a>
 
-        </div>
+        </div-->
     </section>
 
 
@@ -216,8 +221,8 @@
 
                             <li class="visible-lg visible-md"><a href="#team">Team</a></li>
                             <li class="visible-lg visible-md"><a href="#clients" >Associations</a></li>
-                            <li class="visible-lg visible-md"><a href="#yoyo" >We are Hiring!</a></li>
-                            <li class="visible-lg visible-md"><a href="#yoyo" >Publications</a></li>
+                            <li class="visible-lg visible-md"><b>We are Hiring!</b></li>
+                            <li class="visible-lg visible-md"><b>Publications</b></li>
                         </ul>
 
                         <div class="mobile_nav_open_button">
@@ -316,28 +321,30 @@
                         </div>
                     </div>
 
+
+
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 Project_title" >
                         <h2 class="project_head" id="project_head">Projects</h2>
                         <div id="adda" style="padding-left: 5%; padding-right: 5%;">
                             <h3>1adda</h3>
                             <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">1adda is a vision to push startups towards being enterprises.<br>We foster beautiful minds, budding leaders and future entrepreneurs with an integrated ecosystem, consisting of a powerful Mentor Panel, high grade infrastructural support and a well connected community interface.<br>The incubation centre is located in one of the most premier and centrally located areas of Delhi, Greater Kailash-1.<br>We also work very closely with budding student entrepreneurs at the university level, ensuring they put their efforts in the right direction.</p>
-                            <a  href="coming.html" target="_blank"><button class="knowmore" >Know More</button></a>
+                            <a  href="coming.html" target="_blank"><button class="knowmore cta_light" ><h6>Know More</h6></button></a>
                          </div>
                         <div id="shoped" style="padding-left: 5%; padding-right: 5%;">
                             <h3>shoped</h3>
                             <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">We are building 'Shoped'. A platform to connect Brand, Retailer, Consumer and the Service Ecosystem. Shoped will solve the pain of brand to reach out consumers, the pain of consumer to avail post-sales services and will generate a real-time analysis of Sales patterns, consumer behaviour and product lifecycle<br>It happens through creating a Blockchain enabled platform to track Proof-of-Existence, Proof-of-Sale, Proof-of-Ownership, and Proof-of-Service of a product. As it is all stored in an immutable ledger, Every product is tracked from the generation, until disposal, thus creating an audit trail.</p>
-                            <a  href="coming.html" target="_blank"><button class="knowmore" >Know More</button></a>
+                            <a  href="coming.html" target="_blank"><button class="knowmore cta_light" ><h6>Know More</h6></button></a>
                         </div>
                         <div id="fuelscale" style="padding-left: 5%; padding-right: 5%;">
                             <h3>Fuelscale</h3>
                             <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">FuelScale is a complete asset monitoring and smart fuel telematics system, designed for remote fuel monitoring and improving the operational efficiency of any kind of fuel consuming asset. FuelScale while tracking fuel pilferage also gives analysis for predictive maintenance and asset performance in Real-Time.</p>
-                            <a  href="http://www.fuelscale.com/" target="_blank"><button class="knowmore" >Know More</button></a>
+                            <a  href="http://www.fuelscale.com/" target="_blank"><button class="knowmore cta_light" ><h6>Know More</h6></button></a>
                         </div>
-                        <div id="baas" style="padding-left: 5%; padding-right: 5%;padding-top: 5%;">
+                        <div id="baas" style="padding-left: 5%; padding-right: 5%">
                             <h3>BaaS</h3>
                             <p style="margin-top: 5%;text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.</p>
-                            <a  href="coming.html" target="_blank"><button class="knowmore" style="margin-top: 1%;" >Know More</button></a>
+                            <a  href="coming.html" target="_blank"><button class="knowmore cta_light " style="margin-top: 1%;" ><h6>Know More</h6></button></a>
                         </div>
 
                 </div>
@@ -625,22 +632,16 @@
                         <!-- CONTACT FORM -->
                         <div id="contact_form">
                             <form action="php/contactform.php" id="contact-form" method="post">
-                                <div class="input">
-                                <h5>Your Name:</h5>
-                                <input type="text" name="contact-name">
-                                </div>
+
 
                                 <div class="input">
                                 <h5>Your E-mail:</h5>
                                 <input type="email" name="contact-email">
                                 </div>
 
-                                <div class="input">
-                                <h5>Message:</h5>
-                                <textarea name="contact-message"></textarea>
-                                </div>
 
-                                <button id="btn-send" class="cta_light" style="margin-top: 3%;" type="submit">Submit</button>
+
+                                <button id="btn-send" class="cta_light" style="margin-top: 3%;" type="submit">subscribe</button>
                             </form>
                             <div id="message"><div id="alert"></div></div>
                         </div>
@@ -980,7 +981,7 @@
         </div>
     </div>
 
-+
+
 
     <!-- Project Modal 1adda -->
 
