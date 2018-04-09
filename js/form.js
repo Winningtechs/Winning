@@ -4,7 +4,7 @@ $(document).ready(function() {
             submitHandler: function(form) {
                 var clikedForm = $(form);
                 var fID = "#" + clikedForm.attr('id');
-                
+
                 if(fID=="#subscribe"){
                    var jData = {"email":jQuery("#fdata").val(),"subsType":303}
                 }
@@ -15,19 +15,29 @@ $(document).ready(function() {
                     contentType: "application/json",
                     data: JSON.stringify(jData),
                     success: function (response) {
-                        
-                        if(response["result"]=="OK"){
 
-                            $("#no").text("Thank you for subscribing").css("color","white");
+                        if(response["result"]=="OK"){
+                            $("#no").text(response["msg"]).css("color","white");
+                            setTimeout(function() {
+                                $('#no').hide();
+                            }, 150000);
+                            $("#btn-send").css({background: "#2a2d2e", "border-color": "white"});
+                            document.getElementById("btn-send").disabled = true;
+                          $("#fdata").val("")
+
+
+
+                            //$("#no").text(response["msg"]).css("color","white");
+
 
 
                         }else{
-                            
-                            $("#no").text(response["result"]).css("color","red");
+
+                            $("#no").text(response["msg"]).css("color","red");
                         }
                     }
                 });
-            },
+            },errorLabelContainer: "#error",
 
             rules: {
                 field: {

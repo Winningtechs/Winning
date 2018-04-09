@@ -335,8 +335,8 @@
 .scroll-btn {
 	display: block;
 	position: absolute;
-	left:47%;
-	right: 53%;
+	left:50%;
+
 	text-align: center;
 	top: 90%;
 }
