@@ -1623,8 +1623,8 @@ title_content1 {
 }
 
 .owl-item {
-	height:16.25rem;
-	width:auto;
+	height:340px;
+	width:340px;
 	text-align:center;
 }
 
@@ -1633,8 +1633,8 @@ title_content1 {
 	display: block;
 	outline: none;
 	border: none;
-	height:16.25rem;
-	width:auto;
+	height:340px;
+	width:340px;
 	
 } 
 
