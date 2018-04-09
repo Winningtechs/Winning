@@ -6,7 +6,7 @@ $(document).ready(function() {
                 var fID = "#" + clikedForm.attr('id');
                 
                 if(fID=="#subscribe"){
-                   var jData = {"email":jQuery("#fdata").val(),"subsType":101}
+                   var jData = {"email":jQuery("#fdata").val(),"subsType":303}
                 }
                 $.ajax({
                     url: "http://159.122.169.245:5000/api/v1/subscription?apiKey=sLLf33UNNgBRBqmOsXBVgBtubT1ynREKdHWH7OYiOxmo6zFkvMbEVlLmbaMwI6wR",
@@ -28,6 +28,7 @@ $(document).ready(function() {
                     }
                 });
             },
+
             rules: {
                 field: {
                     required: true,
