@@ -37,7 +37,7 @@
 
     <!-- Modernizer and IE specyfic files -->
     <script src="js/modernizr.custom.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
@@ -64,6 +64,7 @@
             });
         });
     </script>
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -168,6 +169,7 @@
                         gl_Position = projectionMatrix * mvPosition;
                     }
 
+
             </script>
             <script type="x-shader/x-fragment" id="wrapFragmentShader">
                     varying vec3 vColor;
@@ -178,6 +180,7 @@
                         vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
                         gl_FragColor = color;
                     }
+
 
             </script>
             <div class="content__inner">
@@ -655,7 +658,12 @@
     <div class="container" style="width: 100%;">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h4 style="color: #f4f4f4;">Winning takes talent, repeating takes Character, We have both!</h4>
+                <h4 style="color: #f4f4f4; font-family: 'Josefin Sans', sans-serif;"><b>Winning takes talent, repeating
+                    takes Character,
+                    <div><p align="center"
+                            style="color: #f4f4f4; font-family: 'Josefin Sans', sans-serif; font-size: 32px;"><b>We have
+                        both!</b></p></div>
+                    </br></h4>
             </div>
         </div>
     </div>
@@ -671,15 +679,19 @@
                     <h2>Contact</h2>
                     <!-- CONTACT FORM -->
                     <div id="contact_form">
-                        <form  id="subscribe" method="post">
+                        <form id="subscribe" method="post" autocomplete="off">
 
 
-                            <div class="input">
+                            <div class="input" id="refresh">
                                 <h5>Your E-mail:</h5>
                                 <input id="fdata" type="email" name="contact-email">
-                            </div><br>
-                            <div ><h6 style="text-transform: none" id="no"></h6></div>
-                                <h6 style="text-transform: none ; color:red"><div id="non"></div></h6>
+                            </div>
+                            <br>
+                            <div><h6 style="text-transform: none" id="no"></h6></div>
+                            <div id="error"></div>
+                            <h6 style="text-transform: none ; color:red">
+                                <div id="non"></div>
+                            </h6>
                             <button id="btn-send" class="cta_light" style="margin-top: 3%;" type="submit">subscribe
                             </button>
 
@@ -1189,11 +1201,7 @@
     <p style="margin-top: 5%; text-align: justify;font-family: 'Roboto', sans-serif; color: #d3d3d3;">Nikoin Blockchain
         as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices
         which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and
-        scale fast, saving time and resources. Nikoin BaaS platform is built to perform.<br>It promotes an array of
-        business blockchain technologies including distributed ledger platforms, smart contract engines and digital
-        assets transfer frameworks. Nikoin BaaS umbrella strategy encourages the reuse and agility of common building
-        blocks and enables rapid innovation of Distributed Ledger Technologies (DLT), intended to be a foundation for
-        developing applications with a modular architecture, Nikoin BaaS allows DLT components to be ‘Plug n Play’.</p>
+        scale fast, saving time and resources. Nikoin BaaS platform is built to perform.
     <a href="coming.html" target="_blank">
         <button class="knowmore">Know More</button>
     </a>
@@ -1233,9 +1241,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
 
-
-
-<script   type="application/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+<script type="application/javascript"
+        src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 <script src="js/form.js"></script>
 
 <!-- OWL CAROUSEL - PORTFOLIO -->
@@ -1287,6 +1294,16 @@
     };
 </script>
 
+<script>
+    var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+    if(is_iPad){
+        alert("Rotate your device better viewing experience! ");
+    }
 
-</body>
+
+
+</script>
+
+
+</body>Nikoin Blockchain as a Service Platform provides enterprise and/or developers with the Blockchain protocol layer as microservices which can be deployed on few clicks, scalable to production environment allowing them to develop, deploy and scale fast, saving time and resources. Nikoin BaaS platform is built to perform.
 </html>
