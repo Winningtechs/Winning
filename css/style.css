@@ -735,20 +735,19 @@ a.button:focus {
 
 
 
-
 /*-- Social Icons --*/
 
 .social_icon{
-    font-size:1.3rem;
-    line-height:1rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+	font-size:1.3rem;
+	line-height:1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .social_icon:hover {
-    cursor:pointer;
+	cursor:pointer;
 }
 
 .social_icons ul, .social_icons ul li {
@@ -767,12 +766,13 @@ a.button:focus {
 	margin-left:0;
 }
 
-.social_icons ul li:last-child {
-	margin-right:0;
+.social_icons ul li {
+	float:left;
+
 }
 
-.social_icons ul li {
-    float:left;
+.social_icons ul li:last-child {
+	margin-right:0;
 }
 
 
