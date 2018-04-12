@@ -200,6 +200,8 @@
 	position: relative;
 	display: inline-block;
 	border: 15px solid #f4f4f4;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .projectcard:hover
 {
@@ -270,7 +272,13 @@
 
 
 
+#xyz{
+    color: #A0A0A0;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 2px;
 
+}
 
 
 
