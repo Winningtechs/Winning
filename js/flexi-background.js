@@ -1,37 +1,10 @@
-/*
-File: flexi-background.js
-
-Author:
-	Michael Bester <http://kimili.com>
-
-About: Version
-	2.0
-
-Description:
-	Javascript to set up full-screen flexible backgrounds in all widely used browsers.
-
-License:
-	Copyright 2010, Michael Bester.
-	Released under the MIT license <http://opensource.org/licenses/mit-license.php>
-*/
 
 (function(){
-	
-	/**
-		CONFIGURATION:
-		Define the size of our background image
-	*/
 	var bgImageSize = {
 		width	: 1200,
 		height	: 750
 	};
-	
-	/*	END CONFIGURATION */
-	
-	/**
-		Detect support for CSS background-size. No need for any more javascript if background-size is supported.
-		Property detection adapted from the most excellent Modernizr <http://modernizr.com>
-	*/
+
 	if ((function(){
 		var el 		= document.createElement('div'),
 			bs 		= 'backgroundSize',
@@ -47,19 +20,11 @@ License:
 	}())) {
 		return;
 	};
-	
-	/**
-		We also want to leave IE6 and below out in the cold with this
-	*/
+
 	if ( false /*@cc_on || @_jscript_version < 5.7 @*/ ) {
 		return;
 	}
-	
-	/**
-		If we've gotten here, we don't have background-size support,
-		so we'll have to mimic it with Javascript.
-		Let's set up some variables
-	*/
+
 	var elBody,
 		imageID		= 'expando',
 		tallClass	= 'tall',
@@ -81,17 +46,7 @@ License:
 		},
 	
 		domLoaded = function(callback) {
-			/* Internet Explorer */
-			/*@cc_on
-			@if (@_win32 || @_win64)
-			document.write('<script id="ieScriptLoad" defer src="//:"><\/script>');
-			document.getElementById('ieScriptLoad').onreadystatechange = function() {
-				if (this.readyState == 'complete') {
-					callback();
-				}
-			};
-			@end @*/
-			/* Mozilla, Chrome, Opera */
+
 			if (document.addEventListener) {
 				document.addEventListener('DOMContentLoaded', callback, false);
 			}
@@ -106,10 +61,7 @@ License:
 			}
 		},
 	
-		/**
-		 	Next, a way to properly get the computed style of an element
-			Courtesy of Robert Nyman - http://robertnyman.com/2006/04/24/get-the-rendered-style-of-an-element/
-		*/
+
 		getStyle = function(el, css){
 			var strValue = "";
 			if (document.defaultView && document.defaultView.getComputedStyle){
@@ -124,9 +76,7 @@ License:
 			return strValue;
 		},
 	
-		/**
-			Finally, some element class manipulation functions
-		*/
+
 		classRegex = function(cls) {
 			return new RegExp('(\\s|^)'+cls+'(\\s|$)');
 		},

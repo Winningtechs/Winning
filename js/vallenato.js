@@ -1,11 +1,3 @@
-/*!
- * Vallenato 1.0
- * A Simple JQuery Accordion
- *
- * Designed by Switchroyale
- * 
- * Use Vallenato for whatever you want, enjoy!
- */
 
 $(document).ready(function()
 {
